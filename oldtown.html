@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<title>OLDTOWN</title>
+	<link type="text/css" rel="stylesheet" href="futura.css">
+	<link type="text/css" rel="stylesheet" href="echo.css">
+	<meta name="author" content="Max Terry">
+	<meta name="description" content="Passenger transport tracking.">
+	<meta name="keywords" content="transit,rail,train,tram,trolley,streetcar,amtrak,bus,coaches,carriages">
+</head>
+<body onload="ol()">
+	<span class="clock">
+		12:00
+	</span>
+	<a href="index.html">
+		<h1>
+			Echo
+		</h1>
+	</a>
+	<a class="current">
+		<h2 id="oldtown">
+			Oldtown
+		</h2>
+	</a>
+	<div id="map">
+	</div>
+	<div id="outbound">
+		<a href="#outbound">
+			<h3>
+				Outbound
+			</h3>
+		</a>
+		<h4 id="bangor-outbound" title="100 Broad St, Bangor">
+			<em>A</em>
+			<a href="">Bangor Depot</a>
+			<!-- <span>44.7997, -68.7706</span> -->
+			<time title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td>06</td>
+				<td>07</td>
+				<td>08</td>
+				<td>09</td>
+				<td>10</td>
+				<td>11</td>
+				<td class="minutes next" rowspan=2>15</td>
+			</tr>
+			<tr>
+				<td class="coming next">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td class="coming">15</td>
+				<td class="coming">16</td>
+				<td class="coming">17</td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<h4 id="emmc-outbound" title="489 State St, Bangor">
+			<em>B</em>
+			<a href="">EMMC</a>
+			<time title="2014-11-04T12:20-0500" datetime="2014-11-04T12:20-0500">20 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td>06</td>
+				<td>07</td>
+				<td>08</td>
+				<td>09</td>
+				<td>10</td>
+				<td>11</td>
+				<td class="minutes next" rowspan=2>20</td>
+			</tr>
+			<tr>
+				<td class="coming next">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td class="coming">15</td>
+				<td class="coming">16</td>
+				<td class="coming">17</td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<h4 id="veazie-outbound" title="">
+			<em>C</em>
+			<a href="">Veazie</a>
+			<time title="2014-11-04T12:30-0500" datetime="2014-11-04T12:30-0500">30 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td>06</td>
+				<td>07</td>
+				<td>08</td>
+				<td>09</td>
+				<td>10</td>
+				<td>11</td>
+				<td class="minutes next" rowspan=2>30</td>
+			</tr>
+			<tr>
+				<td class="coming next">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td class="coming">15</td>
+				<td class="coming">16</td>
+				<td class="coming">17</td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<h4 id="umaine-outbound" title="">
+			<em>D</em>
+			<a href="">UMaine</a>
+			<time title="2014-11-04T12:45-0500" datetime="2014-11-04T12:45-0500">45 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td>05</td>
+				<td>06</td>
+				<td>07</td>
+				<td>08</td>
+				<td>09</td>
+				<td>10</td>
+				<td>11</td>
+				<td class="minutes next" rowspan=2>45</td>
+			</tr>
+			<tr>
+				<td class="coming next">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td class="coming">15</td>
+				<td class="coming">16</td>
+				<td class="coming">17</td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<h4 id="oldtown-outbound" title="Main St, Old Town">
+			<em>E</em>
+			<a href="">Oldtown</a>
+			<time time="2014-11-04T12:55-0500" datetime="2014-11-04T12:55-0500">55 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td>05</td>
+				<td><s>06</s></td>
+				<td><s>07</s></td>
+				<td><s>08</s></td>
+				<td>09</td>
+				<td>10</td>
+				<td>11</td>
+				<td class="minutes next" rowspan=2>55</td>
+			</tr>
+			<tr>
+				<td class="coming next">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td class="coming">15</td>
+				<td class="coming">16</td>
+				<td class="coming">17</td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<h4 id="stillwater-plaza-outbound" title="494 Stillwater Ave, Old Town">
+			<em>F</em>
+			<a href="">Stillwater Plaza</a>
+			<time class="now" title="2014-11-04T12:01-0500" datetime="2014-11-04T12:01-0500">1 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td>06</td>
+				<td><s>07</s></td>
+				<td><s>08</s></td>
+				<td><s>09</s></td>
+				<td>10</td>
+				<td>11</td>
+				<td class="minutes now" rowspan=2>01</td>
+			</tr>
+			<tr>
+				<td class="coming now">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td class="coming">15</td>
+				<td class="coming">16</td>
+				<td class="coming">17</td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<h4 id="university-mall-outbound" title="6 Stillwater Ave, Orono">
+			<em>G</em>
+			<a href="">University Mall</a>
+			<time title="2014-11-04T12:10-0500" datetime="2014-11-04T12:10-0500">10 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td>06</td>
+				<td><s>07</s></td>
+				<td><s>08</s></td>
+				<td><s>09</s></td>
+				<td><s>10</s></td>
+				<td><s>11</s></td>
+				<td class="minutes" rowspan=2>07</td>
+			</tr>
+			<tr>
+				<td><s>12</s></td>
+				<td><s>13</s></td>
+				<td><s>14</s></td>
+				<td class="coming">15</td>
+				<td class="coming">16</td>
+				<td class="coming">17</td>
+				<td class="coming">18</td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td>06</td>
+				<td>07</td>
+				<td>08</td>
+				<td><s>09</s></td>
+				<td><s>10</s></td>
+				<td><s>11</s></td>
+				<td class="minutes" rowspan=2>55</td>
+			</tr>
+			<tr>
+				<td><s>12</s></td>
+				<td><s>13</s></td>
+				<td><s>14</s></td>
+				<td><s>15</s></td>
+				<td><s>16</s></td>
+				<td><s>17</s></td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td><s>06</s></td>
+				<td><s>07</s></td>
+				<td><s>08</s></td>
+				<td><s>09</s></td>
+				<td>10</td>
+				<td>11</td>
+				<td class="minutes next" rowspan=2>10</td>
+			</tr>
+			<tr>
+				<td class="coming next">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td><s>15</s></td>
+				<td><s>16</s></td>
+				<td><s>17</s></td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<h4 id="orono-research-park-outbound" title="19 Godfrey Dr, Orono">
+			<em>H</em>
+			<a href="">Orono Research Park</a>
+			<time title="2014-11-04T15:58-0500" datetime="2014-11-04T15:58-0500">3h 58m</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td>06</td>
+				<td><s>07</s></td>
+				<td><s>08</s></td>
+				<td><s>09</s></td>
+				<td><s>10</s></td>
+				<td><s>11</s></td>
+				<td class="minutes next" rowspan=2>58</td>
+			</tr>
+			<tr>
+				<td><s>12</s></td>
+				<td><s>13</s></td>
+				<td><s>14</s></td>
+				<td class="coming next">15</td>
+				<td class="coming">16</td>
+				<td class="coming">17</td>
+				<td class="coming">18</td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td>06</td>
+				<td>07</td>
+				<td>08</td>
+				<td><s>09</s></td>
+				<td><s>10</s></td>
+				<td><s>11</s></td>
+				<td class="minutes" rowspan=2>10</td>
+			</tr>
+			<tr>
+				<td><s>12</s></td>
+				<td><s>13</s></td>
+				<td><s>14</s></td>
+				<td><s>15</s></td>
+				<td><s>16</s></td>
+				<td><s>17</s></td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+	</div>
+	<div id="inbound">
+		<a href="#inbound">
+			<h3>
+				Inbound
+			</h3>
+		</a>
+		<h4 id="stillwater-plaza-inbound" title="494 Stillwater Ave, Old Town">
+			<em>F</em>
+			<a href="">Stillwater Plaza</a>
+			<time class="coming" title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td><s>06</s></td>
+				<td>07</td>
+				<td>08</td>
+				<td>09</td>
+				<td><s>10</s></td>
+				<td><s>11</s></td>
+				<td class="minutes" rowspan=2>08</td>
+			</tr>
+			<tr>
+				<td><s>12</s></td>
+				<td><s>13</s></td>
+				<td><s>14</s></td>
+				<td><s>15</s></td>
+				<td><s>16</s></td>
+				<td><s>17</s></td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td><s>06</s></td>
+				<td><s>07</s></td>
+				<td><s>08</s></td>
+				<td><s>09</s></td>
+				<td>10</td>
+				<td>11</td>
+				<td class="minutes next" rowspan=2>15</td>
+			</tr>
+			<tr>
+				<td class="coming next">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td><s>15</s></td>
+				<td><s>16</s></td>
+				<td><s>17</s></td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<h4 id="oldtown-inbound" title="Main St, Old Town">
+			<em>E</em>
+			<a href="">Oldtown</a>
+			<time title="2014-11-04T12:20-0500" datetime="2014-11-04T12:20-0500">20 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td><s>06</s></td>
+				<td>07</td>
+				<td>08</td>
+				<td>09</td>
+				<td><s>10</s></td>
+				<td><s>11</s></td>
+				<td class="minutes" rowspan=2>15</td>
+			</tr>
+			<tr>
+				<td><s>12</s></td>
+				<td><s>13</s></td>
+				<td><s>14</s></td>
+				<td><s>15</s></td>
+				<td><s>16</s></td>
+				<td><s>17</s></td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td><s>06</s></td>
+				<td><s>07</s></td>
+				<td><s>08</s></td>
+				<td><s>09</s></td>
+				<td>10</td>
+				<td>11</td>
+				<td class="minutes next" rowspan=2>20</td>
+			</tr>
+			<tr>
+				<td class="coming next">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td><s>15</s></td>
+				<td><s>16</s></td>
+				<td><s>17</s></td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<h4 id="umaine-inbound" title="">
+			<em>D</em>
+			<a href="">UMaine</a>
+			<time title="2014-11-04T12:30-0500" datetime="2014-11-04T12:30-0500">30 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td>06</td>
+				<td>07</td>
+				<td>08</td>
+				<td>09</td>
+				<td>10</td>
+				<td>11</td>
+				<td class="minutes next" rowspan=2>30</td>
+			</tr>
+			<tr>
+				<td class="coming next">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td class="coming">15</td>
+				<td class="coming">16</td>
+				<td class="coming">17</td>
+				<td class="coming">18</td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<h4 id="veazie-inbound" title="">
+			<em>C</em>
+			<a href="">Veazie</a>
+			<time title="2014-11-04T12:45-0500" datetime="2014-11-04T12:45-0500">45 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td><s>06</s></td>
+				<td>07</td>
+				<td>08</td>
+				<td>09</td>
+				<td><s>10</s></td>
+				<td><s>11</s></td>
+				<td class="minutes" rowspan=2>40</td>
+			</tr>
+			<tr>
+				<td><s>12</s></td>
+				<td><s>13</s></td>
+				<td><s>14</s></td>
+				<td class="coming">15</td>
+				<td class="coming">16</td>
+				<td class="coming">17</td>
+				<td class="coming">18</td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td><s>06</s></td>
+				<td><s>07</s></td>
+				<td><s>08</s></td>
+				<td><s>09</s></td>
+				<td>10</td>
+				<td>11</td>
+				<td class="minutes next" rowspan=2>45</td>
+			</tr>
+			<tr>
+				<td class="coming next">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td><s>15</s></td>
+				<td><s>16</s></td>
+				<td><s>17</s></td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<h4 id="emmc-inbound" title="489 State St, Bangor">
+			<em>B</em>
+			<a href="">EMMC</a>
+			<time title="2014-11-04T12:50-0500" datetime="2014-11-04T12:50-0500">50 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td><s>06</s></td>
+				<td>07</td>
+				<td>08</td>
+				<td>09</td>
+				<td>10</td>
+				<td>11</td>
+				<td class="minutes next" rowspan=2>50</td>
+			</tr>
+			<tr>
+				<td class="coming next">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td class="coming">15</td>
+				<td class="coming">16</td>
+				<td class="coming">17</td>
+				<td class="coming">18</td>
+				<td class="coming">19</td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<h4 id="bangor-inbound" title="100 Broad St, Bangor">
+			<em>A</em>
+			<a href="">Bangor Depot</a>
+			<time class="now" title="2014-11-04T12:05-0500" datetime="2014-11-04T12:05-0500">5 min</time>
+		</h4>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td><s>06</s></td>
+				<td>07</td>
+				<td>08</td>
+				<td>09</td>
+				<td>10</td>
+				<td><s>11</s></td>
+				<td class="minutes" rowspan=2>00</td>
+			</tr>
+			<tr>
+				<td><s>12</s></td>
+				<td><s>13</s></td>
+				<td><s>14</s></td>
+				<td><s>15</s></td>
+				<td class="coming">16</td>
+				<td class="coming">17</td>
+				<td class="coming">18</td>
+				<td class="coming">19</td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+		<table class="times">
+			<tr>
+				<td><s>00</s></td>
+				<td><s>01</s></td>
+				<td><s>02</s></td>
+				<td><s>03</s></td>
+				<td><s>04</s></td>
+				<td><s>05</s></td>
+				<td><s>06</s></td>
+				<td><s>07</s></td>
+				<td><s>08</s></td>
+				<td><s>09</s></td>
+				<td><s>10</s></td>
+				<td>11</td>
+				<td class="minutes now" rowspan=2>05</td>
+			</tr>
+			<tr>
+				<td class="coming now">12</td>
+				<td class="coming">13</td>
+				<td class="coming">14</td>
+				<td class="coming">15</td>
+				<td><s>16</s></td>
+				<td><s>17</s></td>
+				<td><s>18</s></td>
+				<td><s>19</s></td>
+				<td><s>20</s></td>
+				<td><s>21</s></td>
+				<td><s>22</s></td>
+				<td><s>23</s></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

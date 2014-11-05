@@ -1,0 +1,169 @@
+body {
+	margin: 0; background: #333;
+	font-family: "Futura Extra Bold", "FuturaBT-Bold", "Arial Black", sans-serif;
+}
+
+.clock {
+	position: absolute; margin-top: -1px; width: 100%;
+	text-align: center; font-family: sans-serif; font-size: x-small; color: #ddd;
+}
+
+a {
+	display: block;
+	border-bottom: solid #bbb 1px;
+	text-decoration: none; color: #aaa;
+}
+
+h1, h2, h3 {
+	border-left: solid #333 12px;
+	text-transform: uppercase; font-weight: bold;
+}
+
+h1 {
+	margin: 0; padding: 12px; background: #eb0000;
+	border-top: solid maroon 12px;
+	text-transform: uppercase; color: white; font-weight: bold;
+}
+
+h1 select {
+	background: #eb0000;
+	border: solid #333 1px;
+	font-family: inherit; font-size: .8em;
+}
+
+@media (max-width: 368px) {
+	h1 select {
+		display: block;
+		width: 100%;
+	}
+}
+
+h2 {
+	margin: 0px; padding: 12px; background: white;
+	border-left: solid white 12px;
+	text-transform: uppercase;
+}
+
+a.active {
+	background: lightyellow;
+	color: #444;
+}
+
+a.active:hover {
+	background: lightyellow;
+	color: #222;
+}
+
+a.current {
+	background: #ffe;
+	color: #222;
+}
+
+h3, h4 {
+	font-family: helvetica, arial, sans-serif;
+}
+
+h3 {
+	margin: 0px; padding: 4px; background: #333;
+	text-align: center; font-size: x-small; color: #eee;
+}
+
+h4 {
+	display: block; margin: 0px; padding: 10px; background: lightyellow;
+	border-bottom: solid #bbb 1px;
+	font-size: large; color: #444;
+}
+
+h4 a {
+	display: inline; color: inherit;
+}
+
+h4 span {
+	font-size: x-small; color: rgb(200, 200, 156);
+}
+
+em {
+	padding: 4px; background: #444;
+	border-radius: 4px;
+	font-style: normal; color: white;
+}
+
+p {
+	margin: 0px; padding: 10px;
+	border-left: solid black 10px;
+	color: #444;
+}
+
+address {
+	font-family: georgia, serif; font-style: normal;
+}
+
+time {
+	float: right; margin-top: -3px; padding: 4px; background: lightgreen;
+	border-radius: 4px;
+	font-size: medium;
+}
+
+time.now {
+	background: #f77373;
+}
+
+s {
+	color: #ddd;
+}
+
+table {
+	width: 100%; background: white;
+	border-bottom: solid #bbb 1px;
+	font-family: georgia, monospace; font-size: small; color: #444;
+}
+
+td {
+	width: 4%;
+	border-bottom: solid white 4px;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+
+	#outbound {
+		float: left; width: 49%;
+	}
+
+	#inbound {
+		float: right; width: 50%;
+	}
+
+}
+
+.minutes {
+	border-left: dotted #444 1px;
+}
+
+.minutes:before {
+	content: ":";
+}
+
+.coming {
+	font-weight: bold;
+}
+
+.next {
+	border-bottom: solid lightgreen 4px;
+}
+
+td.now {
+	border-bottom-color: #f77373;
+}
+
+#brewer-north { border-left-color: rgb(190, 226, 187) }
+#brewer-south { border-left-color: rgb(255, 155, 105) }
+#capehart { border-left-color: rgb(60, 97, 45) }
+#hammond-st { border-left-color: rgb(255, 215, 135) }
+#hampden { border-left-color: rgb(136, 70, 166) }
+#mall-hopper { border-left-color: rgb(197, 20, 70) }
+#oldtown { border-left-color: rgb(42, 176, 152) }
+#stillwater-ave { border-left-color: rgb(62, 55, 154) }
+#center-st { border-left-color: rgb(210, 210, 210) }
+#mt-hope-ave { border-left-color: rgb(255, 255, 76) }
+#black-bear-express { border-left-color: rgb(0, 173, 255) }
