@@ -156,15 +156,15 @@ td.now {
 	border-bottom-color: #f77373;
 }
 
-#brewer-north { border-left-color: rgb(190, 226, 187) }
-#brewer-south { border-left-color: rgb(255, 155, 105) }
-#capehart { border-left-color: rgb(60, 97, 45) }
-#hammond-st { border-left-color: rgb(255, 215, 135) }
-#hampden { border-left-color: rgb(136, 70, 166) }
-#mall-hopper { border-left-color: rgb(197, 20, 70) }
-#oldtown { border-left-color: rgb(42, 176, 152) }
-#stillwater-ave { border-left-color: rgb(62, 55, 154) }
-#center-st { border-left-color: rgb(210, 210, 210) }
-#mt-hope-ave { border-left-color: rgb(255, 255, 76) }
-#black-bear-express { border-left-color: rgb(0, 173, 255) }
+#brewer-north { border-left-color: #bee2bb }
+#brewer-south { border-left-color: #ff9b69 }
+#capehart { border-left-color: #3c612d }
+#hammond-st { border-left-color: #ffd787 }
+#hampden { border-left-color: #8846a6 }
+#mall-hopper { border-left-color: #c51446 }
+#oldtown { border-left-color: #2ab098 }
+#stillwater-ave { border-left-color: #3e379a }
+#center-st { border-left-color: #d2d2d2 }
+#mt-hope-ave { border-left-color: #808080 }
+#black-bear-express { border-left-color: #00adff }
 
