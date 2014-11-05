@@ -78,10 +78,6 @@ h2 a, h4 a {
 	display: inline; color: inherit;
 }
 
-h4 span {
-	font-size: x-small; color: rgb(200, 200, 156);
-}
-
 em {
 	padding: 4px; background: #444;
 	border-radius: 4px;
@@ -167,4 +163,3 @@ td.now {
 #center-st { border-left-color: #d2d2d2 }
 #mt-hope-ave { border-left-color: #808080 }
 #black-bear-express { border-left-color: #00adff }
-
