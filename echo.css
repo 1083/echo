@@ -1,6 +1,6 @@
 body {
 	margin: 0; background: #333;
-	font-family: "Futura Extra Bold", "FuturaBT-Bold", "Arial Black", sans-serif;
+	font-family: "Futura Extra Bold", "Arial Black", helvetica, sans-serif;
 }
 
 .clock {
@@ -74,7 +74,7 @@ h4 {
 	font-size: large; color: #444;
 }
 
-h4 a {
+h2 a, h4 a {
 	display: inline; color: inherit;
 }
 
@@ -167,3 +167,4 @@ td.now {
 #center-st { border-left-color: rgb(210, 210, 210) }
 #mt-hope-ave { border-left-color: rgb(255, 255, 76) }
 #black-bear-express { border-left-color: rgb(0, 173, 255) }
+
