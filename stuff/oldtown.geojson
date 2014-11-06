@@ -4,9 +4,129 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "Bangor Depot",
+        "marker-symbol": "A",
+        "marker-size": "large",
+        "marker-color": "dd1144",
+        "description": "Pickering Square.",
+        "address": "100 Broad St, Bangor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.799798, -68.770634]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "EMMC",
+        "marker-symbol": "B",
+        "marker-size": "large",
+        "marker-color": "dd1144",
+        "description": "Eastern Maine Medical Center.",
+        "address": "489 State St, Bangor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.809030, -68.751823]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Veazie",
+        "marker-symbol": "C",
+        "marker-size": "large",
+        "marker-color": "dd1144",
+        "description": "Community Center.",
+        "address": "Veazie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.837701, -68.705065]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "UMaine",
+        "marker-symbol": "D",
+        "marker-size": "large",
+        "marker-color": "dd1144",
+        "description": "University of Maine Memorial Union.",
+        "address": "Orono"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.899431, -68.667654]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Old Town",
+        "marker-symbol": "E",
+        "marker-size": "large",
+        "marker-color": "dd1144",
+        "description": "Downtown Old Town.",
+        "address": "Main St, Old Town"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.935851, -68.646244]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stillwater Plaza",
+        "marker-symbol": "F",
+        "marker-size": "large",
+        "marker-color": "dd1144",
+        "description": "Hannaford, Aubuchon Hardware, Family Dollar, YMCA, Olympia Sports, restaurants.",
+        "address": "494 Stillwater Ave, Old Town"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.926375, -68.665902]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "University Mall",
+        "marker-symbol": "G",
+        "marker-size": "large",
+        "marker-color": "dd1144",
+        "description": "Bell's IGA, Dollar Tree, Spotlight Cinemas, restaurants.",
+        "address": "6 Stillwater Ave, Orono"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.899933, -68.683380]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Orono Research Park",
+        "marker-symbol": "H",
+        "marker-size": "large",
+        "marker-color": "dd1144",
+        "description": "R&D facility and office space.",
+        "address": "19 Godfrey Dr, Orono"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.799798, -68.770634]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Oldtown",
-        "description": "Bangor, Veazie, Orono, University of Maine, Old Town",
-        "stroke": "#2ab098",
+        "description": "Bangor, Veazie, Orono, University of Maine, Old Town. Passenger transport since 1835.",
+        "stroke": "2ab098",
         "stroke-width": 5,
         "stroke-opacity": 0.6
       },
