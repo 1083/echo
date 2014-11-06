@@ -3,15 +3,14 @@ body {
 	font-family: "Futura Extra Bold", "Arial Black", helvetica, sans-serif;
 }
 
-.clock {
-	position: absolute; margin-top: -1px; width: 100%;
-	text-align: center; font-family: sans-serif; font-size: x-small; color: #ddd;
-}
-
 a {
 	display: block;
 	border-bottom: solid #bbb 1px;
 	text-decoration: none; color: #aaa;
+}
+
+address {
+	font-family: georgia, serif; font-style: normal;
 }
 
 h1, h2, h3 {
@@ -22,20 +21,12 @@ h1, h2, h3 {
 h1 {
 	margin: 0; padding: 12px; background: #eb0000;
 	border-top: solid maroon 12px;
-	text-transform: uppercase; color: white; font-weight: bold;
+	color: white; font-weight: bold;
 }
 
-h1 select {
-	background: #eb0000;
-	border: solid #333 1px;
-	font-family: inherit; font-size: .8em;
-}
-
-@media (max-width: 368px) {
-	h1 select {
-		display: block;
-		width: 100%;
-	}
+select {
+	background: inherit;
+	font-family: inherit; font-size: x-small; color: inherit;
 }
 
 h2 {
@@ -44,44 +35,30 @@ h2 {
 	text-transform: uppercase;
 }
 
-a.active {
-	background: lightyellow;
-	color: #444;
-}
-
-a.active:hover {
-	background: lightyellow;
-	color: #222;
-}
-
-a.current {
-	background: #ffe;
-	color: #222;
-}
-
-h3, h4 {
-	font-family: helvetica, arial, sans-serif;
-}
-
-h3 {
-	margin: 0px; padding: 4px; background: #333;
-	text-align: center; font-size: x-small; color: #eee;
-}
-
-h4 {
-	display: block; margin: 0px; padding: 10px; background: lightyellow;
-	border-bottom: solid #bbb 1px;
-	font-size: large; color: #444;
-}
-
 h2 a, h4 a {
 	display: inline; color: inherit;
 }
 
-em {
-	padding: 4px; background: #444;
-	border-radius: 4px;
-	font-style: normal; color: white;
+h3, h4, h5 {
+	margin: 0px;
+	font-family: helvetica, arial, sans-serif;
+}
+
+h3 {
+	padding: 4px; background: #333;
+	text-align: center; font-size: x-small; color: #eee;
+}
+
+h4 {
+	display: block; padding: 10px; background: lightyellow;
+	border-bottom: solid #bbb 1px;
+	font-size: large; color: #444;
+}
+
+h5 {
+	display: block; margin: 0px; padding: 10px; background: lightyellow;
+	border-bottom: solid #bbb 1px;
+	font-size: medium; color: #444;
 }
 
 p {
@@ -90,22 +67,19 @@ p {
 	color: #444;
 }
 
-address {
-	font-family: georgia, serif; font-style: normal;
-}
-
-time {
-	float: right; margin-top: -3px; padding: 4px; background: lightgreen;
-	border-radius: 4px;
-	font-size: medium;
-}
-
-time.now {
-	background: #f77373;
-}
-
 s {
 	color: #ddd;
+}
+
+small {
+	position: absolute; margin-top: -1px; width: 100%;
+	text-align: center; font-family: sans-serif; font-size: x-small; color: #ddd;
+}
+
+strong {
+	padding: 4px; background: #444;
+	border-radius: 4px;
+	font-style: normal; color: white;
 }
 
 table {
@@ -120,16 +94,35 @@ td {
 	text-align: center;
 }
 
-@media (min-width: 768px) {
+time {
+	float: right; margin-top: -3px; padding: 4px; background: lightgreen;
+	border-radius: 4px;
+	font-size: medium;
+}
 
-	#outbound {
-		float: left; width: 49%;
-	}
+.above {
+	border-bottom-color: #333;
+	color: #444;
+}
 
-	#inbound {
-		float: right; width: 50%;
-	}
 
+.active {
+	background: lightyellow;
+	color: #444;
+}
+
+.active:hover {
+	background: lightyellow;
+	color: #222;
+}
+
+.coming {
+	font-weight: bold;
+}
+
+.current {
+	background: #ffe;
+	color: #222;
 }
 
 .minutes {
@@ -140,16 +133,16 @@ td {
 	content: ":";
 }
 
-.coming {
-	font-weight: bold;
-}
-
 .next {
 	border-bottom: solid lightgreen 4px;
 }
 
 td.now {
 	border-bottom-color: #f77373;
+}
+
+time.now {
+	background: #f77373;
 }
 
 #brewer-north { border-left-color: #bee2bb }
@@ -163,3 +156,15 @@ td.now {
 #center-st { border-left-color: #d2d2d2 }
 #mt-hope-ave { border-left-color: #808080 }
 #black-bear-express { border-left-color: #00adff }
+
+@media (min-width: 768px) {
+
+	#outbound {
+		float: left; width: 49%;
+	}
+
+	#inbound {
+		float: right; width: 50%;
+	}
+
+}
