@@ -126,7 +126,117 @@
 </p>
 <p>
 	A couple years ago I worked on pilot projects for two of the six class I railroads.
+	We tracked trains in near-realtime, and it was just really cool to watch them moving around a map.
+	For transit, near-realtime data seems to only appear for major metro areas&mdash;
+	this makes sense, but it's often overwhelming and, given the frequency of options in major urban places,
+	per capita less useful.
+	(The Firebase SF demo, for instance: _.)
+	This summer I wanted to put Tessels on the BAT buses.
+	I don't think they're quite up to the task yet, but I've'nt really done enough with mine yet.
+</p>
+<p>
+	Before sticking transmitters on transit vehicles, I thought it more important to have a very
+	usable interface for displaying the data.
+	There are many perfectly good, very generalized tools to get transit info,
+	but their generality makes them weak for the demands of relying on transit.
+	It's very different than traveling by automobile,
+	and a transit app has very different demands:
+	with automobiles, one usually wants directions from A to B;
+	for transit, one has to be mindful of transfers and times and so on.
+	And even more, many automobile trips are one-offs, while transit is general a repeatedly thing
+	(till you memorize the route perhaps), even if it's only there-and-back-again as a tourist/visitor.
 </p>
 <h3>
 	Design
 </h3>
+	<h4>Title</h4>
+		<h5>Current absolute time</h5>
+		<p>
+			Included for demonstration purposes only,
+			since all content is static and relative to current time being noon.
+		</p>
+		<h5>Colors</h5>
+		<ul>
+			<li>
+				Page colors drawn from Bangor Community Connector visual design; essentially temporary
+			</li>
+		</ul>
+		<h5>Typography</h5>
+		<p>
+			Futura Extra Bold, fallback to Arial Black.
+		</p>
+		<h5>Logo</h5>
+		<ul>
+			<li>Bat symbol design is original, meant to be abstract</li>
+			<li>Maybe there's a side-ways "E"</li>
+			<li>Bit like a sound wave</li>
+			<li>Position data "from the skies"</li>
+		</ul>
+
+	<h4>
+		Selection
+	</h4>
+	<ul>
+		<li>Denote routes by (agency-specified) color</li>
+	</ul>
+
+	<h4>
+		Map
+	</h4>
+	<ul>
+		<li>Offline</li>
+		<li>OSM</li>
+		<li>Leaflet?</li>
+	</ul>
+
+	<h4>
+		Trips &amp; Stops
+	</h4>
+	<ul>
+		<li>Respoinsive outbound and inbound time tables</li>
+		<li>Letter of stop</li>
+		<li>Name</li>
+		<li>Address in [title]</li>
+		<li>Link to Street View or agency site?</li>
+		<li>Relative time till next arrival</li>
+		<li>Ordering of stops</li>
+	</ul>
+
+	<h4>
+		Times
+	</h4>
+		<h5>
+			24 Hours
+		</h5>
+		<ul>
+			<li>Feels unfamiliar to Americans ("military time")</li>
+			<li>Dominant in more transit-oriented Eurasia</li>
+			<li>Easier arithmetic (e.g. 6:00 + 8 hours = 14:00)</li>
+			<li>a.m. / p.m. was an optimization for bell towers (i.e. so as not to ring 17 times at quit'n time) </li>
+		</ul>
+		<h5>
+			Separation of hours and minutes
+		</h5>
+		<p>
+			Split up this way from personal experience:
+			if I know the bus comes for the next four hours at :15,
+			I feel like I've more flexibility on when to catch it,
+			since it's easier to remember and consider in-memory (brain RAM)
+			without need to keep checking back to a screen.
+			(A good transit app should quickly render itself unnecessary for oft-ridden routes,
+			with the user quickly memorizing stop locations and times.)
+		</p>
+		<h5>
+			Styling
+		</h5>
+		<ul>
+			<li>Strikethrough and gray out hours not covered</li>
+			<li>Normal weight and ununderlined for passed</li>
+			<li>Enbolden coming</li>
+			<li>Underline next</li>
+		</ul>
+
+	<h4>Not Handled Much or At All</h4>
+	<ul>
+		<li>Transfers</li>
+	</ul>
