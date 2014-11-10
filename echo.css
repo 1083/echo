@@ -151,6 +151,21 @@ time.now {
 	background: #f77373;
 }
 
+.explain {
+	padding-bottom: 14px; background: lightyellow;
+	border-left-color: orange; border-left-width: 12px;
+	border-top: solid orange 1px; border-bottom: solid orange 1px;
+	font-family: verdana, sans-serif; font-size: small; color: #444;
+}
+
+.explain strong {
+	padding: 2px;
+}
+
+.explain a {
+	display: inline;
+}
+
 #brewer-north { border-left-color: #bee2bb }
 #brewer-south { border-left-color: #ff9b69 }
 #capehart { border-left-color: #3c612d }
