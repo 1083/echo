@@ -4,12 +4,16 @@ a {
 	text-decoration: none; color: #aaa;
 }
 
+abbr {
+	border-bottom: dotted #444 1px;
+}
+
 address {
 	font-family: georgia, serif; font-style: normal;
 }
 
 body {
-	margin: 0; background: #333;
+	margin: 0px; background: #333;
 	font-family: "Futura Extra Bold", "Arial Black", helvetica, sans-serif;
 }
 
@@ -152,18 +156,23 @@ time.now {
 }
 
 .explain {
-	padding-bottom: 14px; background: lightyellow;
+	padding-bottom: 14px; background: #ffa;
 	border-left-color: orange; border-left-width: 12px;
-	border-top: solid orange 1px; border-bottom: solid orange 1px;
+	border-bottom: dashed orange 1px;
 	font-family: verdana, sans-serif; font-size: small; color: #444;
 }
 
 .explain strong {
-	padding: 2px;
+	float: left; margin-right: 6px; padding: 2px;
+}
+
+.right {
+	float: right !important;
 }
 
 .explain a {
 	display: inline;
+	color: inherit;
 }
 
 #brewer-north { border-left-color: #bee2bb }

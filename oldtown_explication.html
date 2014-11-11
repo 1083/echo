@@ -21,7 +21,11 @@
 	</a>
 	<p class="explain">
 		<strong>&uarr;</strong>
-		Logo and colors inspired by the Bangor Community Connector.
+		Bats use echolocation for visualization, and suggests transit maps' "bat's eye view".
+		<br><br>
+		The logo also resembles a side-ways "E", and is meant to stand uniquely from other depictions of the flying rodent.
+		<br><br>
+		Red is meant to evoke energy and trigger action (i.e. catching the ride).
 	</p>
 	<p class="explain">
 		<strong>&darr;</strong>
@@ -46,11 +50,12 @@
 	</p>	
 	<div id="map">
 	</div>
+	<p class="explain">
+		<strong>&darr;</strong>
+		The "<a href="#outbound">Outbound</a>" and "<a href="#inbound">Inbound</a>"
+		time tables stack for screen widths under 768px.
+	</p>
 	<div id="outbound">
-		<p class="explain">
-			<strong>&darr;</strong>
-			Outbound and inbound time tables are stacked for screen widths under 768px.
-		</p>
 		<a href="#outbound">
 			<h3>
 				Outbound
@@ -61,6 +66,18 @@
 			<a href="" target="_blank">Bangor Depot</a>
 			<time title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
 		</h4>
+		<p class="explain">
+			<strong>&uarr;</strong>
+			These stop letters were assigned by the agency,
+			other lines may enumerate differently.
+			The stop name currently links to Google Street View;
+			hover over for address.
+		</p>
+		<p class="explain">
+			<strong class="right">&uarr;</strong>
+			Relative time to next stop;
+			hover over for ISO-8601 representation.
+		</p>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -92,6 +109,28 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
+		<p class="explain">
+			<strong>&uarr;</strong>
+			Hours not covered are struckthrough and grayed out;
+			times already passed are shown in normal weight and ununderlined;
+			upcoming are enboldened;
+			next is underlined in light green,
+			unless it's currently the closest stop, then light red.
+			<br>
+			<br>
+			The typeface is Georgia, optimal for Arabic numerals <abbr title="in my humble opinion">IMHO</abbr>.
+		</p>
+		<p class="explain">
+			<strong class="right">&uarr;</strong>
+			The hours and minutes are split apart this way from personal experience:
+			if I know the bus comes for the next four hours at :15,
+			I feel like I've more flexibility,
+			since it's easier to remember and consider in short term memory (brain RAM)
+			without need to keep checking back to a screen.
+			<br><br>
+			A good transit app should quickly render itself unnecessary for oft-ridden routes,
+			with the user quickly memorizing stop locations and times.
+		</p>
 		<h4 id="emmc-outbound" title="489 State St, Bangor">
 			<strong>B</strong>
 			<a href="" target="_blank">
@@ -130,6 +169,22 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
+		<p class="explain">
+			<strong>&uarr;</strong>
+			24 hour time makes temporal arithmetic easier (e.g. 6:00 + 8 hours = 14:00),
+			and removes clutter and confusion.
+			<br><br>
+			Feels unfamiliar to Americans ("military time"), but is (<abbr title="as far as I know">AFAIK</abbr>) dominant in more transit-oriented Eurasia.
+			<br><br>
+			After all, the <abbr title="">a.m.</abbr> / <abbr title="">p.m.</abbr> thing was originally
+			a bell tower optimization (i.e. so as not to ring 17 times at quit'n time).
+			<br><br>
+			Somewhat contentious design choice, but powerful products challenge&mdash;then change&mdash;you, the user.
+			(You become what you behold, to paraphrase McLuhan.) Good ones change you for the better.
+			<br><br>
+			This layout would seem a good teaching tool for memorizing 24h time,
+			with the afternoon times right below their p.m. equivalent.
+		</p>
 		<h4 id="veazie-outbound" title="">
 			<strong>C</strong>
 			<a href="" target="_blank">Veazie</a>
@@ -274,6 +329,11 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
+		<p class="explain">
+			<strong>&uarr;</strong>
+			Implementation-wise, not quite sure of the optimal criteria to determine the current stop (denoted in light red).
+			Initially should just be the next one.
+		</p>
 		<h4 id="university-mall-outbound" title="6 Stillwater Ave, Orono">
 			<strong>G</strong>
 			<a href="" target="_blank">University Mall</a>
@@ -786,6 +846,10 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
+		<p class="explain">
+			Note that, at this example time of noon,
+			2 separate busses are running concurrently.
+		</p>
 	</div>
 </body>
 </html>
