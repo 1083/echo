@@ -9,7 +9,25 @@
 	<meta name="keywords" content="transit,rail,train,tram,trolley,streetcar,amtrak,bus,coaches,carriages">
 </head>
 <body>
-	<p class="explain">
+	<script>
+function toggleComments(self) {
+	var mode = self.textContent.split(/\s/)[0]
+	if (!mode) mode = "Show"
+	self.textContent = (mode == "Show"? "Hide" : "Show") + " Design Comments"
+	var comments = document.getElementsByClassName('comment')
+	for (var i in comments) {
+		if (!comments[i].classList.contains('toggle')) {
+			comments[i].style.display = mode == "Show"? 'block' : 'none'
+		}
+	}
+}
+	</script>
+	<p class="comment toggle">
+		<a onclick="toggleComments(this)">
+			Show Design Comments
+		</a>
+	</p>
+	<p class="comment">
 		<strong>&darr;</strong> Absolute time is only included for this markup mockup, to make clear that the time is noon.
 	</p>
 	<small title="Static Time for Demonstration">12:00 EST</small>
@@ -17,9 +35,10 @@
 		<h1>
 			<img src="logo.png">
 			Echo Transit
+
 		</h1>
 	</a>
-	<p class="explain">
+	<p class="comment">
 		<strong>&uarr;</strong>
 		Bats use echolocation for visualization, and suggests transit maps' "bat's eye view".
 		<br><br>
@@ -27,7 +46,7 @@
 		<br><br>
 		Red is meant to evoke energy and trigger action (i.e. catching the ride).
 	</p>
-	<p class="explain">
+	<p class="comment">
 		<strong>&darr;</strong>
 		The typeface is Futura Extra Bold or falls back to Arial Black.
 	</p>
@@ -36,7 +55,7 @@
 			Oldtown
 		</a>
 	</h2>
-	<p class="explain">
+	<p class="comment">
 		<strong>&uarr;</strong>
 		Follows
 		<a href="http://wikipedia.org/Route_2">
@@ -50,7 +69,7 @@
 	</p>	
 	<div id="map">
 	</div>
-	<p class="explain">
+	<p class="comment">
 		<strong>&darr;</strong>
 		The "<a href="#outbound">Outbound</a>" and "<a href="#inbound">Inbound</a>"
 		time tables stack for screen widths under 768px.
@@ -66,14 +85,14 @@
 			<a href="" target="_blank">Bangor Depot</a>
 			<time title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
 		</h4>
-		<p class="explain">
+		<p class="comment">
 			<strong>&uarr;</strong>
 			These stop letters were assigned by the agency,
 			other lines may enumerate differently.
 			The stop name currently links to Google Street View;
 			hover over for address.
 		</p>
-		<p class="explain">
+		<p class="comment">
 			<strong class="right">&uarr;</strong>
 			Relative time to next stop;
 			hover over for ISO-8601 representation.
@@ -109,7 +128,7 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<p class="explain">
+		<p class="comment">
 			<strong>&uarr;</strong>
 			Hours not covered are struckthrough and grayed out;
 			times already passed are shown in normal weight and ununderlined;
@@ -120,7 +139,7 @@
 			<br>
 			The typeface is Georgia, optimal for Arabic numerals <abbr title="in my humble opinion">IMHO</abbr>.
 		</p>
-		<p class="explain">
+		<p class="comment">
 			<strong class="right">&uarr;</strong>
 			The hours and minutes are split apart this way from personal experience:
 			if I know the bus comes for the next four hours at :15,
@@ -169,7 +188,7 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<p class="explain">
+		<p class="comment">
 			<strong>&uarr;</strong>
 			24 hour time makes temporal arithmetic easier (e.g. 6:00 + 8 hours = 14:00),
 			and removes clutter and confusion.
@@ -329,7 +348,7 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<p class="explain">
+		<p class="comment">
 			<strong>&uarr;</strong>
 			Implementation-wise, not quite sure of the optimal criteria to determine the current stop (denoted in light red).
 			Initially should just be the next one.
@@ -846,7 +865,7 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<p class="explain">
+		<p class="comment">
 			Note that, at this example time of noon,
 			2 separate busses are running concurrently.
 		</p>

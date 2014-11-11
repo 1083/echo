@@ -155,24 +155,27 @@ time.now {
 	background: #f77373;
 }
 
-.explain {
-	padding-bottom: 14px; background: #ffa;
-	border-left-color: orange; border-left-width: 12px;
-	border-bottom: dashed orange 1px;
+.comment {
+	display: none; padding-bottom: 14px; background: #ffa;
+	border-left-color: orange; border-left-width: 12px; border-bottom: dashed orange 1px;
 	font-family: verdana, sans-serif; font-size: small; color: #444;
 }
 
-.explain strong {
+.comment strong {
 	float: left; margin-right: 6px; padding: 2px;
+}
+
+.comment a {
+	display: inline;
+	color: inherit;
 }
 
 .right {
 	float: right !important;
 }
 
-.explain a {
-	display: inline;
-	color: inherit;
+.toggle {
+	display: block; cursor: pointer;
 }
 
 #brewer-north { border-left-color: #bee2bb }
