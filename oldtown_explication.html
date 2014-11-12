@@ -10,12 +10,16 @@
 </head>
 <body>
 	<script>
+
 function toggleComments(self) {
-	var mode = self.textContent.split(/\s/)[0] || "Show";
-	self.textContent = (mode == "Show"? "Hide" : "Show") + " Design Comments";
-	var comments = document.getElementsByClassName('comment');
+	var text = self['textContent']? 'textContent' : 'innerHTML'
+	var mode = self[text].split(/\s/)[0] || "Show";
+	self[text] = (mode == "Show"? "Hide" : "Show") + " Design Comments";
+	var comments = document.getElementsByTagName('p');
 	for (var i=1, l=comments.length; i<l; i++) {
-		comments[i].style.display = mode == "Show"? 'block' : 'none';
+		if (comments[i].className == 'comment') {
+			comments[i].style.display = mode == "Show"? 'block' : 'none';
+		}
 	}
 }
 	</script>
