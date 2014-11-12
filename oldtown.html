@@ -59,21 +59,20 @@ function toggleComments(self) {
 	<p class="comment">
 		<strong>&uarr;</strong>
 		Follows
-		<a href="http://wikipedia.org/Route_2">
-			Route 2
-		</a>
-		and the
-		<a href-"">
-			second oldest passenger transit route
-		</a>
-		in the U.S., dating back to 1835.
+		<a href="http://wikipedia.org/Route_2">Route 2</a>
+		and
+		<a href-"">one of the oldest passenger transit routes</a>
+		in the U.S.,
+		dating back to <time title="1836-11-20">November 1836</time>,
+		not long after the <abbr title="Baltimore and Ohio Railroad">B&amp;O</abbr>
+		published the <a href="http://naotc.org/history/tt-history.html#_Inception_to_Civil">first transit timetable</a>.
 	</p>
 	<div id="map">
 	</div>
 	<p class="comment">
 		<strong>&darr;</strong>
 		The "<a href="#outbound">Outbound</a>" and "<a href="#inbound">Inbound</a>"
-		time tables stack for screen widths under 768px.
+		timetables stack for screen widths under 768px.
 	</p>
 	<div id="outbound">
 		<a href="#outbound">
@@ -84,7 +83,7 @@ function toggleComments(self) {
 		<h4 id="bangor-outbound" title="100 Broad St, Bangor">
 			<strong>A</strong>
 			<a href="" target="_blank">Bangor Depot</a>
-			<time title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
+			<time class="relative" title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
 		</h4>
 		<p class="comment">
 			<strong>&uarr;</strong>
@@ -156,7 +155,7 @@ function toggleComments(self) {
 			<a href="" target="_blank">
 				EMMC
 			</a>
-			<time title="2014-11-04T12:20-0500" datetime="2014-11-04T12:20-0500">20 min</time>
+			<time class="relative" title="2014-11-04T12:20-0500" datetime="2014-11-04T12:20-0500">20 min</time>
 		</h4>
 		<table class="times">
 			<tr>
@@ -196,8 +195,8 @@ function toggleComments(self) {
 			<br><br>
 			Feels unfamiliar to Americans ("military time"), but is (<abbr title="as far as I know">AFAIK</abbr>) dominant in more transit-oriented Eurasia.
 			<br><br>
-			After all, the <abbr title="">a.m.</abbr> / <abbr title="">p.m.</abbr> thing was originally
-			a bell tower optimization (i.e. so as not to ring 17 times at quit'n time).
+			After all, the <abbr title="ante meridiem">a.m.</abbr> / <abbr title="post meridiem">p.m.</abbr> thing was originally
+			a bell tower optimization (i.e. so as not to ring 17 times at quit'n time). [Citation needed...]
 			<br><br>
 			Somewhat contentious design choice, but powerful products challenge&mdash;then change&mdash;you, the user.
 			(You become what you behold, to paraphrase McLuhan.) Good ones change you for the better.
@@ -208,7 +207,7 @@ function toggleComments(self) {
 		<h4 id="veazie-outbound" title="">
 			<strong>C</strong>
 			<a href="" target="_blank">Veazie</a>
-			<time title="2014-11-04T12:30-0500" datetime="2014-11-04T12:30-0500">30 min</time>
+			<time class="relative" title="2014-11-04T12:30-0500" datetime="2014-11-04T12:30-0500">30 min</time>
 		</h4>
 		<table class="times">
 			<tr>
@@ -244,7 +243,7 @@ function toggleComments(self) {
 		<h4 id="umaine-outbound" title="">
 			<strong>D</strong>
 			<a href="" target="_blank">UMaine</a>
-			<time title="2014-11-04T12:45-0500" datetime="2014-11-04T12:45-0500">45 min</time>
+			<time class="relative" title="2014-11-04T12:45-0500" datetime="2014-11-04T12:45-0500">45 min</time>
 		</h4>
 		<table class="times">
 			<tr>
@@ -280,7 +279,7 @@ function toggleComments(self) {
 		<h4 id="old-town-outbound" title="Main St, Old Town">
 			<strong>E</strong>
 			<a href="" target="_blank">Old Town</a>
-			<time title="2014-11-04T12:55-0500" datetime="2014-11-04T12:55-0500">55 min</time>
+			<time class="relative" title="2014-11-04T12:55-0500" datetime="2014-11-04T12:55-0500">55 min</time>
 		</h4>
 		<table class="times">
 			<tr>
@@ -316,7 +315,7 @@ function toggleComments(self) {
 		<h4 id="stillwater-plaza-outbound" title="494 Stillwater Ave, Old Town">
 			<strong>F</strong>
 			<a href="" target="_blank">Stillwater Plaza</a>
-			<time class="now" title="2014-11-04T12:01-0500" datetime="2014-11-04T12:01-0500">1 min</time>
+			<time class="relative now" title="2014-11-04T12:01-0500" datetime="2014-11-04T12:01-0500">1 min</time>
 		</h4>
 		<table class="times">
 			<tr>
@@ -357,7 +356,7 @@ function toggleComments(self) {
 		<h4 id="university-mall-outbound" title="6 Stillwater Ave, Orono">
 			<strong>G</strong>
 			<a href="" target="_blank">University Mall</a>
-			<time title="2014-11-04T12:10-0500" datetime="2014-11-04T12:10-0500">10 min</time>
+			<time class="relative" title="2014-11-04T12:10-0500" datetime="2014-11-04T12:10-0500">10 min</time>
 		</h4>
 		<table class="times">
 			<tr>
@@ -455,7 +454,7 @@ function toggleComments(self) {
 		<h4 id="orono-research-park-outbound" title="19 Godfrey Dr, Orono">
 			<strong>H</strong>
 			<a href="" target="_blank">Orono Research Park</a>
-			<time title="2014-11-04T15:58-0500" datetime="2014-11-04T15:58-0500">3h 58m</time>
+			<time class="relative" title="2014-11-04T15:58-0500" datetime="2014-11-04T15:58-0500">3h 58m</time>
 		</h4>
 		<table class="times">
 			<tr>
@@ -529,7 +528,7 @@ function toggleComments(self) {
 		<h4 id="stillwater-plaza-inbound" title="494 Stillwater Ave, Old Town">
 			<strong>F</strong>
 			<a href="" target="_blank">Stillwater Plaza</a>
-			<time class="coming" title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
+			<time class="relative" title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
 		</h4>
 		<table class="times">
 			<tr>
@@ -596,7 +595,7 @@ function toggleComments(self) {
 		<h4 id="old-town-inbound" title="Main St, Old Town">
 			<strong>E</strong>
 			<a href="" target="_blank">Old Town</a>
-			<time title="2014-11-04T12:20-0500" datetime="2014-11-04T12:20-0500">20 min</time>
+			<time class="relative" title="2014-11-04T12:20-0500" datetime="2014-11-04T12:20-0500">20 min</time>
 		</h4>
 		<table class="times">
 			<tr>
@@ -663,7 +662,7 @@ function toggleComments(self) {
 		<h4 id="umaine-inbound" title="">
 			<strong>D</strong>
 			<a href="" target="_blank">UMaine</a>
-			<time title="2014-11-04T12:30-0500" datetime="2014-11-04T12:30-0500">30 min</time>
+			<time class="relative" title="2014-11-04T12:30-0500" datetime="2014-11-04T12:30-0500">30 min</time>
 		</h4>
 		<table class="times">
 			<tr>
@@ -699,7 +698,7 @@ function toggleComments(self) {
 		<h4 id="veazie-inbound" title="">
 			<strong>C</strong>
 			<a href="" target="_blank">Veazie</a>
-			<time title="2014-11-04T12:45-0500" datetime="2014-11-04T12:45-0500">45 min</time>
+			<time class="relative" title="2014-11-04T12:45-0500" datetime="2014-11-04T12:45-0500">45 min</time>
 		</h4>
 		<table class="times">
 			<tr>
@@ -766,7 +765,7 @@ function toggleComments(self) {
 		<h4 id="emmc-inbound" title="489 State St, Bangor">
 			<strong>B</strong>
 			<a href="" target="_blank">EMMC</a>
-			<time title="2014-11-04T12:50-0500" datetime="2014-11-04T12:50-0500">50 min</time>
+			<time class="relative" title="2014-11-04T12:50-0500" datetime="2014-11-04T12:50-0500">50 min</time>
 		</h4>
 		<table class="times">
 			<tr>
@@ -802,7 +801,7 @@ function toggleComments(self) {
 		<h4 id="bangor-inbound" title="100 Broad St, Bangor">
 			<strong>A</strong>
 			<a href="" target="_blank">Bangor Depot</a>
-			<time class="now" title="2014-11-04T12:05-0500" datetime="2014-11-04T12:05-0500">5 min</time>
+			<time class="relative now" title="2014-11-04T12:05-0500" datetime="2014-11-04T12:05-0500">5 min</time>
 		</h4>
 		<table class="times">
 			<tr>

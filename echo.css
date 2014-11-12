@@ -5,7 +5,7 @@ a {
 }
 
 abbr {
-	border-bottom: dotted #444 1px;
+	border-bottom: dotted #888 1px;
 }
 
 address {
@@ -105,9 +105,14 @@ td {
 }
 
 time {
-	float: right; margin-top: -3px; padding: 4px; background: lightgreen;
+	padding: 4px;
+	border: solid #bbb 1px; border-radius: 4px;
+}
+
+time.relative {
+	float: right; margin-top: -3px; background: lightgreen;
 	border-radius: 4px;
-	font-size: medium;
+	font-size: medium; color: #444;
 }
 
 .above {
