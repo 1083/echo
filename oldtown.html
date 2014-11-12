@@ -9,25 +9,72 @@
 	<meta name="keywords" content="transit,rail,train,tram,trolley,streetcar,amtrak,bus,coaches,carriages">
 </head>
 <body>
-	<p class="comment">
-		<a href="oldtown_explication.html">
-			Show Design Explanation
+	<script>
+
+function toggleComments(self) {
+	var text = self['textContent']? 'textContent' : 'innerHTML'
+	var mode = self[text].split(/\s/)[0] || "Show";
+	self[text] = (mode == "Show"? "Hide" : "Show") + " Design Comments";
+	var comments = document.getElementsByTagName('p');
+	for (var i=1, l=comments.length; i<l; i++) {
+		if (comments[i].className == 'comment') {
+			comments[i].style.display = mode == "Show"? 'block' : 'none';
+		}
+	}
+}
+	</script>
+	<p class="comment toggle">
+		<a onclick="toggleComments(this)">
+			Show Design Comments
 		</a>
+	</p>
+	<p class="comment">
+		<strong>&darr;</strong> Absolute time is only included for this markup mockup, to make clear that the time is noon.
 	</p>
 	<small title="Static Time for Demonstration">12:00 EST</small>
 	<a href="index.html">
 		<h1>
 			<img src="logo.png">
 			Echo Transit
+
 		</h1>
 	</a>
+	<p class="comment">
+		<strong>&uarr;</strong>
+		Bats use echolocation for visualization, and suggests transit maps' "bat's eye view".
+		<br><br>
+		The logo also resembles a side-ways "E", and is meant to stand uniquely from other depictions of the flying rodent.
+		<br><br>
+		Red is meant to evoke energy and trigger action (i.e. catching the ride).
+	</p>
+	<p class="comment">
+		<strong>&darr;</strong>
+		The typeface is Futura Extra Bold or falls back to Arial Black.
+	</p>
 	<h2 id="oldtown">
 		<a class="current" href="http://www.bangormaine.gov/?id=2&sub_id=2744" target="_blank">
 			Oldtown
 		</a>
 	</h2>
+	<p class="comment">
+		<strong>&uarr;</strong>
+		Follows
+		<a href="http://wikipedia.org/Route_2">
+			Route 2
+		</a>
+		and the
+		<a href-"">
+			second oldest passenger transit route
+		</a>
+		in the U.S., dating back to 1835.
+	</p>
 	<div id="map">
 	</div>
+	<p class="comment">
+		<strong>&darr;</strong>
+		The "<a href="#outbound">Outbound</a>" and "<a href="#inbound">Inbound</a>"
+		time tables stack for screen widths under 768px.
+	</p>
 	<div id="outbound">
 		<a href="#outbound">
 			<h3>
@@ -39,6 +86,18 @@
 			<a href="" target="_blank">Bangor Depot</a>
 			<time title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
 		</h4>
+		<p class="comment">
+			<strong>&uarr;</strong>
+			These stop letters were assigned by the agency,
+			other lines may enumerate differently.
+			The stop name currently links to Google Street View;
+			hover over for address.
+		</p>
+		<p class="comment">
+			<strong class="right">&uarr;</strong>
+			Relative time to next stop;
+			hover over for ISO-8601 representation.
+		</p>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -70,6 +129,28 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
+		<p class="comment">
+			<strong>&uarr;</strong>
+			Hours not covered are struckthrough and grayed out;
+			times already passed are shown in normal weight and ununderlined;
+			upcoming are enboldened;
+			next is underlined in light green,
+			unless it's currently the closest stop, then light red.
+			<br>
+			<br>
+			The typeface is Georgia, optimal for Arabic numerals <abbr title="in my humble opinion">IMHO</abbr>.
+		</p>
+		<p class="comment">
+			<strong class="right">&uarr;</strong>
+			The hours and minutes are split apart this way from personal experience:
+			if I know the bus comes for the next four hours at :15,
+			I feel like I've more flexibility,
+			since it's easier to remember and consider in short term memory (brain RAM)
+			without need to keep checking back to a screen.
+			<br><br>
+			A good transit app should quickly render itself unnecessary for oft-ridden routes,
+			with the user quickly memorizing stop locations and times.
+		</p>
 		<h4 id="emmc-outbound" title="489 State St, Bangor">
 			<strong>B</strong>
 			<a href="" target="_blank">
@@ -108,6 +189,22 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
+		<p class="comment">
+			<strong>&uarr;</strong>
+			24 hour time makes temporal arithmetic easier (e.g. 6:00 + 8 hours = 14:00),
+			and removes clutter and confusion.
+			<br><br>
+			Feels unfamiliar to Americans ("military time"), but is (<abbr title="as far as I know">AFAIK</abbr>) dominant in more transit-oriented Eurasia.
+			<br><br>
+			After all, the <abbr title="">a.m.</abbr> / <abbr title="">p.m.</abbr> thing was originally
+			a bell tower optimization (i.e. so as not to ring 17 times at quit'n time).
+			<br><br>
+			Somewhat contentious design choice, but powerful products challenge&mdash;then change&mdash;you, the user.
+			(You become what you behold, to paraphrase McLuhan.) Good ones change you for the better.
+			<br><br>
+			This layout would seem a good teaching tool for memorizing 24h time,
+			with the afternoon times right below their p.m. equivalent.
+		</p>
 		<h4 id="veazie-outbound" title="">
 			<strong>C</strong>
 			<a href="" target="_blank">Veazie</a>
@@ -252,6 +349,11 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
+		<p class="comment">
+			<strong>&uarr;</strong>
+			Implementation-wise, not quite sure of the optimal criteria to determine the current stop (denoted in light red).
+			Initially should just be the next one.
+		</p>
 		<h4 id="university-mall-outbound" title="6 Stillwater Ave, Orono">
 			<strong>G</strong>
 			<a href="" target="_blank">University Mall</a>
@@ -764,6 +866,10 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
+		<p class="comment">
+			Note that, at this example time of noon,
+			2 separate busses are running concurrently.
+		</p>
 	</div>
 </body>
 </html>
