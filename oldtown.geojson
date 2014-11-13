@@ -5,120 +5,144 @@
       "type": "Feature",
       "properties": {
         "title": "Bangor Depot",
-        "marker-symbol": "A",
+        "marker-symbol": "a",
         "marker-size": "large",
-        "marker-color": "dd1144",
+        "marker-color": "#2ab098",
         "description": "Pickering Square.",
         "address": "100 Broad St, Bangor"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [44.799798, -68.770634]
+        "coordinates": [
+          -68.770634,
+          44.799798
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "title": "EMMC",
-        "marker-symbol": "B",
+        "marker-symbol": "b",
         "marker-size": "large",
-        "marker-color": "dd1144",
+        "marker-color": "#2ab098",
         "description": "Eastern Maine Medical Center.",
         "address": "489 State St, Bangor"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [44.809030, -68.751823]
+        "coordinates": [
+          -68.751823,
+          44.80903
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "title": "Veazie",
-        "marker-symbol": "C",
+        "marker-symbol": "c",
         "marker-size": "large",
-        "marker-color": "dd1144",
+        "marker-color": "#2ab098",
         "description": "Community Center.",
         "address": "Veazie"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [44.837701, -68.705065]
+        "coordinates": [
+          -68.705065,
+          44.837701
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "title": "UMaine",
-        "marker-symbol": "D",
+        "marker-symbol": "d",
         "marker-size": "large",
-        "marker-color": "dd1144",
+        "marker-color": "#2ab098",
         "description": "University of Maine Memorial Union.",
         "address": "Orono"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [44.899431, -68.667654]
+        "coordinates": [
+          -68.667654,
+          44.899431
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "title": "Old Town",
-        "marker-symbol": "E",
+        "marker-symbol": "e",
         "marker-size": "large",
-        "marker-color": "dd1144",
+        "marker-color": "#2ab098",
         "description": "Downtown Old Town.",
         "address": "Main St, Old Town"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [44.935851, -68.646244]
+        "coordinates": [
+          -68.646244,
+          44.935851
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "title": "Stillwater Plaza",
-        "marker-symbol": "F",
+        "marker-symbol": "f",
         "marker-size": "large",
-        "marker-color": "dd1144",
+        "marker-color": "#2ab098",
         "description": "Hannaford, Aubuchon Hardware, Family Dollar, YMCA, Olympia Sports, restaurants.",
         "address": "494 Stillwater Ave, Old Town"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [44.926375, -68.665902]
+        "coordinates": [
+          -68.665902,
+          44.926375
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "title": "University Mall",
-        "marker-symbol": "G",
+        "marker-symbol": "g",
         "marker-size": "large",
-        "marker-color": "dd1144",
+        "marker-color": "#2ab098",
         "description": "Bell's IGA, Dollar Tree, Spotlight Cinemas, restaurants.",
         "address": "6 Stillwater Ave, Orono"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [44.899933, -68.683380]
+        "coordinates": [
+          -68.690752,
+          44.905801
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "title": "Orono Research Park",
-        "marker-symbol": "H",
+        "marker-symbol": "h",
         "marker-size": "large",
-        "marker-color": "dd1144",
+        "marker-color": "#2ab098",
         "description": "R&D facility and office space.",
-        "address": "19 Godfrey Dr, Orono"
+        "address": "17 Godfrey Dr, Orono"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [44.799798, -68.770634]
+        "coordinates": [
+          -68.68338,
+          44.899933
+        ]
       }
     },
     {
@@ -126,7 +150,7 @@
       "properties": {
         "title": "Oldtown",
         "description": "Bangor, Veazie, Orono, University of Maine, Old Town. Passenger transport since 1835.",
-        "stroke": "2ab098",
+        "stroke": "#2ab098",
         "stroke-width": 5,
         "stroke-opacity": 0.6
       },
@@ -1502,84 +1526,120 @@
             44.904125
           ],
           [
-            -68.689542,
+            -68.690008,
+            44.90427
+          ],
+          [
+            -68.689784,
+            44.904124
+          ],
+          [
+            -68.689541,
             44.904
           ],
           [
             -68.689245,
-            44.903912
+            44.903911
           ],
           [
-            -68.688953,
-            44.903841
+            -68.688952,
+            44.90384
           ],
           [
             -68.6888,
             44.903731
           ],
           [
-            -68.688677,
-            44.903552
+            -68.688676,
+            44.903551
           ],
           [
-            -68.688654,
+            -68.688653,
             44.903449
           ],
           [
-            -68.688665,
+            -68.688664,
             44.903263
           ],
           [
-            -68.688816,
-            44.902824
+            -68.688891,
+            44.902606
           ],
           [
-            -68.688816,
-            44.902824
+            -68.688994,
+            44.902363
           ],
           [
-            -68.688665,
-            44.903263
+            -68.689107,
+            44.902043
           ],
           [
-            -68.688654,
-            44.903449
+            -68.689166,
+            44.901804
           ],
           [
-            -68.688677,
-            44.903552
+            -68.689182,
+            44.901534
           ],
           [
-            -68.6888,
-            44.903731
+            -68.689128,
+            44.900508
           ],
           [
-            -68.688953,
-            44.903841
+            -68.689074,
+            44.900257
           ],
           [
-            -68.689245,
-            44.903912
+            -68.688854,
+            44.899923
           ],
           [
-            -68.689542,
-            44.904
+            -68.688527,
+            44.899737
           ],
           [
-            -68.689785,
-            44.904125
+            -68.68828,
+            44.899672
           ],
           [
-            -68.69018,
-            44.90438
+            -68.688028,
+            44.899642
           ],
           [
-            -68.689796,
-            44.904767
+            -68.687363,
+            44.899653
           ],
           [
-            -68.689433,
-            44.905144
+            -68.685882,
+            44.899691
+          ],
+          [
+            -68.684263,
+            44.899733
+          ],
+          [
+            -68.683967,
+            44.899737
+          ],
+          [
+            -68.683632,
+            44.899789
+          ],
+          [
+            -68.683239,
+            44.899741
+          ],
+          [
+            -68.683115,
+            44.900007
+          ],
+          [
+            -68.683451,
+            44.900066
+          ],
+          [
+            -68.683594,
+            44.899845
           ]
         ]
       }
