@@ -4,28 +4,16 @@
 	<title>Oldtown - Echo Transit</title>
 	<link rel="shortcut icon" href="favicon.ico">
 	<link type="text/css" rel="stylesheet" href="echo.css">
+	<link type="text/css" rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
+	<script type="application/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script type="application/javascript" src="echo.js"></script>
 	<meta name="author" content="Max Terry">
 	<meta name="description" content="Transit tracker for Bangor, Veazie, Orono, and Old Town, Maine.">
 	<meta name="keywords" content="transit,rail,train,tram,trolley,streetcar,amtrak,bus,coaches,carriages">
 </head>
-<body>
-	<script>
-
-function toggleComments(self) {
-	var text = self['textContent']? 'textContent' : 'innerHTML';
-	var mode = self[text].split(/\s/)[0] || "Show";
-	self[text] = (mode == "Show"? "Hide" : "Show") + " Design Comments";
-	var comments = document.getElementsByTagName('p');
-	for (var i=1, l=comments.length; i<l; i++) {
-		if (comments[i].className == 'comment') {
-			comments[i].style.display = mode == "Show"? 'block' : 'none';
-		}
-	}
-}
-
-	</script>
+<body onload="Echo.renderMap()">
 	<p class="comment toggle">
-		<a onclick="toggleComments(this)">
+		<a onclick="Echo.toggleComments(this)">
 			Show Design Comments
 		</a>
 	</p>

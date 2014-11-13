@@ -194,6 +194,11 @@ time.now {
 #mt-hope-ave { border-left-color: #808080 }
 #black-bear-express { border-left-color: #00adff }
 
+#map {
+	background: #bbb;
+	height: 180px;
+}
+
 @media (min-width: 768px) {
 
 	#outbound {
