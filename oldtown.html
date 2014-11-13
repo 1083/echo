@@ -12,7 +12,7 @@
 	<script>
 
 function toggleComments(self) {
-	var text = self['textContent']? 'textContent' : 'innerHTML'
+	var text = self['textContent']? 'textContent' : 'innerHTML';
 	var mode = self[text].split(/\s/)[0] || "Show";
 	self[text] = (mode == "Show"? "Hide" : "Show") + " Design Comments";
 	var comments = document.getElementsByTagName('p');
@@ -22,6 +22,7 @@ function toggleComments(self) {
 		}
 	}
 }
+
 	</script>
 	<p class="comment toggle">
 		<a onclick="toggleComments(this)">
@@ -29,23 +30,23 @@ function toggleComments(self) {
 		</a>
 	</p>
 	<p class="comment">
-		<strong>&darr;</strong> Absolute time is only included for this markup mockup, to make clear that the time is noon.
+		<strong>&darr;</strong>
+		Absolute time is only included for this markup mockup,
+		to make clear that the time is noon.
 	</p>
 	<small title="Static Time for Demonstration">12:00 EST</small>
 	<a href="index.html">
 		<h1>
 			<img src="logo.png">
 			Echo Transit
-
 		</h1>
 	</a>
 	<p class="comment">
 		<strong>&uarr;</strong>
-		Bats use echolocation for visualization, and suggests transit maps' "bat's eye view".
+		Bats &ndash; visualize via echolocation, under-utilized graphically, suggest transit maps' "bat's eye view".
+		The logo is meant to stand uniquely from other depictions of the flying rodent (and kinda resembles a side-ways "E" too).
 		<br><br>
-		The logo also resembles a side-ways "E", and is meant to stand uniquely from other depictions of the flying rodent.
-		<br><br>
-		Red is meant to evoke energy and trigger action (i.e. catching the ride).
+		Red is meant to raise energy, trigger action (i.e. catching the ride).
 	</p>
 	<p class="comment">
 		<strong>&darr;</strong>
@@ -61,11 +62,11 @@ function toggleComments(self) {
 		Follows
 		<a href="http://wikipedia.org/Route_2">Route 2</a>
 		and
-		<a href-"">one of the oldest passenger transit routes</a>
+		<a href="http://bangor.mainememory.net/page/1904/print.html">one of the oldest passenger transit routes</a>
 		in the U.S.,
 		dating back to <time title="1836-11-20">November 1836</time>,
-		not long after the <abbr title="Baltimore and Ohio Railroad">B&amp;O</abbr>
-		published the <a href="http://naotc.org/history/tt-history.html#_Inception_to_Civil">first transit timetable</a>.
+		six years after the launch of the <abbr title="Baltimore and Ohio Railroad">B&amp;O</abbr>
+		(and <a href="http://naotc.org/history/tt-history.html#_Inception_to_Civil">first transit timetable</a>).
 	</p>
 	<div id="map">
 	</div>
@@ -95,7 +96,7 @@ function toggleComments(self) {
 		<p class="comment">
 			<strong class="right">&uarr;</strong>
 			Relative time to next stop;
-			hover over for ISO-8601 representation.
+			hover over for <a href="http://xkcd.com/1179">ISO 8601</a> representation.
 		</p>
 		<table class="times">
 			<tr>
@@ -137,7 +138,7 @@ function toggleComments(self) {
 			unless it's currently the closest stop, then light red.
 			<br>
 			<br>
-			The typeface is Georgia, optimal for Arabic numerals <abbr title="in my humble opinion">IMHO</abbr>.
+			The typeface is Georgia, with varied ascenders and descenders that're optimal for Arabic numeral legibility <abbr title="in my humble opinion">IMHO</abbr>.
 		</p>
 		<p class="comment">
 			<strong class="right">&uarr;</strong>
@@ -193,16 +194,20 @@ function toggleComments(self) {
 			24 hour time makes temporal arithmetic easier (e.g. 6:00 + 8 hours = 14:00),
 			and removes clutter and confusion.
 			<br><br>
-			Feels unfamiliar to Americans ("military time"), but is (<abbr title="as far as I know">AFAIK</abbr>) dominant in more transit-oriented Eurasia.
+			It feels unfamiliar to Americans ("military time"), but is (<abbr title="as far as I know">AFAIK</abbr>) dominant in more transit-oriented Eurasia,
+			and is already widely used for passenger transport
+			(e.g. <a href="http://amtrak.com/get-mobile-application-and-access">Amtrak</a>).
 			<br><br>
-			After all, the <abbr title="ante meridiem">a.m.</abbr> / <abbr title="post meridiem">p.m.</abbr> thing was originally
-			a bell tower optimization (i.e. so as not to ring 17 times at quit'n time). [Citation needed...]
+			After all, the widespread adoption of 12h time seems due to striking clocks
+			(i.e. so as not to ring 17 times at quit'n time).
 			<br><br>
-			Somewhat contentious design choice, but powerful products challenge&mdash;then change&mdash;you, the user.
-			(You become what you behold, to paraphrase McLuhan.) Good ones change you for the better.
+			Somewhat contentious in terms of usability,
+			but powerful products challenge&mdash;then change&mdash;you, the user.
+			(You become what you behold, to paraphrase McLuhan.)
+			Good ones change you for the better.
 			<br><br>
 			This layout would seem a good teaching tool for memorizing 24h time,
-			with the afternoon times right below their p.m. equivalent.
+			with the afternoon times right below their <abbr title="post meridiem">p.m.</abbr> equivalent.
 		</p>
 		<h4 id="veazie-outbound" title="">
 			<strong>C</strong>
@@ -317,6 +322,10 @@ function toggleComments(self) {
 			<a href="" target="_blank">Stillwater Plaza</a>
 			<time class="relative now" title="2014-11-04T12:01-0500" datetime="2014-11-04T12:01-0500">1 min</time>
 		</h4>
+		<p class="comment">
+			<strong>&uarr;</strong>
+			The stops on the return trip are listed geographically,
+			proceeding in reverse alphabetical order.
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -350,7 +359,8 @@ function toggleComments(self) {
 		</table>
 		<p class="comment">
 			<strong>&uarr;</strong>
-			Implementation-wise, not quite sure of the optimal criteria to determine the current stop (denoted in light red).
+			Implementation-wise, not quite sure of the optimal criteria to determine the current stop
+			(denoted in light red).
 			Initially should just be the next one.
 		</p>
 		<h4 id="university-mall-outbound" title="6 Stillwater Ave, Orono">
@@ -867,7 +877,7 @@ function toggleComments(self) {
 		</table>
 		<p class="comment">
 			Note that, at this example time of noon,
-			2 separate busses are running concurrently.
+			2 separate buses are running concurrently.
 		</p>
 	</div>
 </body>
