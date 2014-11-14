@@ -11,12 +11,7 @@
 	<meta name="description" content="Transit tracker for Bangor, Veazie, Orono, and Old Town, Maine.">
 	<meta name="keywords" content="transit,rail,train,tram,trolley,streetcar,amtrak,bus,coaches,carriages">
 </head>
-<body onload="Echo.renderMap()">
-	<p class="comment toggle">
-		<a onclick="Echo.toggleComments(this)">
-			Show Design Comments
-		</a>
-	</p>
+<body onload="Echo.main()">
 	<p class="comment">
 		<strong>&darr;</strong>
 		Absolute time is only included for this markup mockup,
@@ -69,11 +64,13 @@
 				Outbound
 			</h3>
 		</a>
-		<h4 id="bangor-outbound" title="100 Broad St, Bangor">
-			<strong>A</strong>
-			<a href="" target="_blank">Bangor Depot</a>
-			<time class="relative" title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
-		</h4>
+		<a href="#A">
+			<h4 id="bangor-outbound" title="100 Broad St, Bangor">
+				<strong class="oldtown">A</strong>
+				<em>Bangor Depot</em>
+				<time class="relative" title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
+			</h4>
+		</a>
 		<p class="comment">
 			<strong>&uarr;</strong>
 			These stop letters were assigned by the agency,
@@ -139,13 +136,13 @@
 			A good transit app should quickly render itself unnecessary for oft-ridden routes,
 			with the user quickly memorizing stop locations and times.
 		</p>
-		<h4 id="emmc-outbound" title="489 State St, Bangor">
-			<strong>B</strong>
-			<a href="" target="_blank">
-				EMMC
-			</a>
-			<time class="relative" title="2014-11-04T12:20-0500" datetime="2014-11-04T12:20-0500">20 min</time>
-		</h4>
+		<a href="#B">
+			<h4 id="emmc-outbound" title="489 State St, Bangor">
+				<strong class="oldtown">B</strong>
+				<em>EMMC</em>
+				<time class="relative" title="2014-11-04T12:20-0500" datetime="2014-11-04T12:20-0500">20 min</time>
+			</h4>
+		</a>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -197,11 +194,13 @@
 			This layout would seem a good teaching tool for memorizing 24h time,
 			with the afternoon times right below their <abbr title="post meridiem">p.m.</abbr> equivalent.
 		</p>
-		<h4 id="veazie-outbound" title="">
-			<strong>C</strong>
-			<a href="" target="_blank">Veazie</a>
-			<time class="relative" title="2014-11-04T12:30-0500" datetime="2014-11-04T12:30-0500">30 min</time>
-		</h4>
+		<a href="#C">
+			<h4 id="veazie-outbound" title="">
+				<strong class="oldtown">C</strong>
+				<em>Veazie</em>
+				<time class="relative" title="2014-11-04T12:30-0500" datetime="2014-11-04T12:30-0500">30 min</time>
+			</h4>
+		</a>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -233,11 +232,13 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<h4 id="umaine-outbound" title="">
-			<strong>D</strong>
-			<a href="" target="_blank">UMaine</a>
-			<time class="relative" title="2014-11-04T12:45-0500" datetime="2014-11-04T12:45-0500">45 min</time>
-		</h4>
+		<a href="#D">
+			<h4 id="umaine-outbound" title="">
+				<strong class="oldtown">D</strong>
+				<em>UMaine</em>
+				<time class="relative" title="2014-11-04T12:45-0500" datetime="2014-11-04T12:45-0500">45 min</time>
+			</h4>
+		</a>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -269,11 +270,13 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<h4 id="old-town-outbound" title="Main St, Old Town">
-			<strong>E</strong>
-			<a href="" target="_blank">Old Town</a>
-			<time class="relative" title="2014-11-04T12:55-0500" datetime="2014-11-04T12:55-0500">55 min</time>
-		</h4>
+		<a href="#E">
+			<h4 id="old-town-outbound" title="Main St, Old Town">
+				<strong class="oldtown">E</strong>
+				<em>Old Town</em>
+				<time class="relative" title="2014-11-04T12:55-0500" datetime="2014-11-04T12:55-0500">55 min</time>
+			</h4>
+		</a>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -305,11 +308,13 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<h4 id="stillwater-plaza-outbound" title="494 Stillwater Ave, Old Town">
-			<strong>F</strong>
-			<a href="" target="_blank">Stillwater Plaza</a>
-			<time class="relative now" title="2014-11-04T12:01-0500" datetime="2014-11-04T12:01-0500">1 min</time>
-		</h4>
+		<a href="#F">
+			<h4 id="stillwater-plaza-outbound" title="494 Stillwater Ave, Old Town">
+				<strong class="oldtown">F</strong>
+				<em>Stillwater Plaza</em>
+				<time class="relative now" title="2014-11-04T12:01-0500" datetime="2014-11-04T12:01-0500">1 min</time>
+			</h4>
+		</a>
 		<p class="comment">
 			<strong>&uarr;</strong>
 			The stops on the return trip are listed geographically,
@@ -351,11 +356,13 @@
 			(denoted in light red).
 			Initially should just be the next one.
 		</p>
-		<h4 id="university-mall-outbound" title="6 Stillwater Ave, Orono">
-			<strong>G</strong>
-			<a href="" target="_blank">University Mall</a>
-			<time class="relative" title="2014-11-04T12:10-0500" datetime="2014-11-04T12:10-0500">10 min</time>
-		</h4>
+		<a href="#G">
+			<h4 id="university-mall-outbound" title="6 Stillwater Ave, Orono">
+				<strong class="oldtown">G</strong>
+				<em>University Mall</em>
+				<time class="relative" title="2014-11-04T12:10-0500" datetime="2014-11-04T12:10-0500">10 min</time>
+			</h4>
+		</a>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -449,11 +456,13 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<h4 id="orono-research-park-outbound" title="19 Godfrey Dr, Orono">
-			<strong>H</strong>
-			<a href="" target="_blank">Orono Research Park</a>
-			<time class="relative" title="2014-11-04T15:58-0500" datetime="2014-11-04T15:58-0500">3h 58m</time>
-		</h4>
+		<a href="#H">
+			<h4 id="orono-research-park-outbound" title="19 Godfrey Dr, Orono">
+				<strong class="oldtown">H</strong>
+				<em>Orono Research Park</em>
+				<time class="relative" title="2014-11-04T15:58-0500" datetime="2014-11-04T15:58-0500">3h 58m</time>
+			</h4>
+		</a>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -523,11 +532,13 @@
 				Inbound
 			</h3>
 		</a>
-		<h4 id="stillwater-plaza-inbound" title="494 Stillwater Ave, Old Town">
-			<strong>F</strong>
-			<a href="" target="_blank">Stillwater Plaza</a>
-			<time class="relative" title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
-		</h4>
+		<a href="#F">
+			<h4 id="stillwater-plaza-inbound" title="494 Stillwater Ave, Old Town">
+				<strong class="oldtown">F</strong>
+				<em>Stillwater Plaza</em>
+				<time class="relative" title="2014-11-04T12:15-0500" datetime="2014-11-04T12:15-0500">15 min</time>
+			</h4>
+		</a>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -590,11 +601,13 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<h4 id="old-town-inbound" title="Main St, Old Town">
-			<strong>E</strong>
-			<a href="" target="_blank">Old Town</a>
-			<time class="relative" title="2014-11-04T12:20-0500" datetime="2014-11-04T12:20-0500">20 min</time>
-		</h4>
+		<a href="#E">
+			<h4 id="old-town-inbound" title="Main St, Old Town">
+				<strong class="oldtown">E</strong>
+				<em>Old Town</em>
+				<time class="relative" title="2014-11-04T12:20-0500" datetime="2014-11-04T12:20-0500">20 min</time>
+			</h4>
+		</a>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -657,11 +670,13 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<h4 id="umaine-inbound" title="">
-			<strong>D</strong>
-			<a href="" target="_blank">UMaine</a>
-			<time class="relative" title="2014-11-04T12:30-0500" datetime="2014-11-04T12:30-0500">30 min</time>
-		</h4>
+		<a href="#D">
+			<h4 id="umaine-inbound" title="">
+				<strong class="oldtown">D</strong>
+				<em>UMaine</em>
+				<time class="relative" title="2014-11-04T12:30-0500" datetime="2014-11-04T12:30-0500">30 min</time>
+			</h4>
+		</a>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -693,11 +708,13 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<h4 id="veazie-inbound" title="">
-			<strong>C</strong>
-			<a href="" target="_blank">Veazie</a>
-			<time class="relative" title="2014-11-04T12:45-0500" datetime="2014-11-04T12:45-0500">45 min</time>
-		</h4>
+		<a href="#C">
+			<h4 id="veazie-inbound" title="">
+				<strong class="oldtown">C</strong>
+				<em>Veazie</em>
+				<time class="relative" title="2014-11-04T12:45-0500" datetime="2014-11-04T12:45-0500">45 min</time>
+			</h4>
+		</a>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -760,11 +777,13 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<h4 id="emmc-inbound" title="489 State St, Bangor">
-			<strong>B</strong>
-			<a href="" target="_blank">EMMC</a>
-			<time class="relative" title="2014-11-04T12:50-0500" datetime="2014-11-04T12:50-0500">50 min</time>
-		</h4>
+		<a href="#B">
+			<h4 id="emmc-inbound" title="489 State St, Bangor">
+				<strong class="oldtown">B</strong>
+				<em>EMMC</em>
+				<time class="relative" title="2014-11-04T12:50-0500" datetime="2014-11-04T12:50-0500">50 min</time>
+			</h4>
+		</a>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -796,11 +815,13 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<h4 id="bangor-inbound" title="100 Broad St, Bangor">
-			<strong>A</strong>
-			<a href="" target="_blank">Bangor Depot</a>
-			<time class="relative now" title="2014-11-04T12:05-0500" datetime="2014-11-04T12:05-0500">5 min</time>
-		</h4>
+		<a href="#A">
+			<h4 id="bangor-inbound" title="100 Broad St, Bangor">
+				<strong class="oldtown">A</strong>
+				<em>Bangor Depot</em>
+				<time class="relative now" title="2014-11-04T12:05-0500" datetime="2014-11-04T12:05-0500">5 min</time>
+			</h4>
+		</a>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -864,9 +885,17 @@
 			</tr>
 		</table>
 		<p class="comment">
+			<strong>
+				&uarr;
+			</strong>
 			Note that, at this example time of noon,
 			2 separate buses are running concurrently.
 		</p>
 	</div>
+	<p class="comment toggle">
+		<a onclick="Echo.commentary(this)">
+			Show Design Commentary
+		</a>
+	</p>
 </body>
 </html>

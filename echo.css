@@ -1,11 +1,10 @@
 a {
 	display: block;
-	border-bottom: solid #bbb 1px;
 	text-decoration: none; color: #aaa;
 }
 
 abbr {
-	border-bottom: dotted #888 1px;
+	border-bottom: dotted 1px #888;
 }
 
 address {
@@ -17,15 +16,19 @@ body {
 	font-family: 'Arial Black', helvetica, arial, sans-serif;
 }
 
+em {
+	border-bottom: solid 1px #bbb;
+}
+
 h1, h2, h3 {
-	border-left: solid #333 12px;
+	border-left: solid 12px #333;
 	text-transform: uppercase; font-weight: bold;
 }
 
 h1 {
 	margin: 0; padding: 12px; background: #eb0000;
-	border-top: solid maroon 12px;
-	font-weight: bold; color: white;
+	border-top: solid 12px #800;
+	font-weight: bold; color: #fff;
 }
 
 @media (max-width: 364px) {
@@ -35,8 +38,8 @@ h1 {
 }
 
 h2 {
-	margin: 0px; padding: 12px; background: white;
-	border-left: solid white 12px;
+	margin: 0px; padding: 12px; background: #fff;
+	border-left: solid #fff 12px;
 	text-transform: uppercase;
 }
 
@@ -50,25 +53,26 @@ h3, h4, h5 {
 }
 
 h3 {
-	padding: 4px; background: #333;
-	text-align: center; font-size: x-small; color: #eee;
+	padding: 4px; background: #2ab098;
+	border-left-color: #2ab098;
+	text-align: center; font-size: x-small; color: #ffe;
 }
 
 h4 {
 	display: block; padding: 10px; background: lightyellow;
-	border-bottom: solid #bbb 1px;
+	border-bottom: solid 1px #bbb;
 	font-size: large; color: #444;
 }
 
 h5 {
 	display: block; margin: 0px; padding: 10px; background: lightyellow;
-	border-bottom: solid #bbb 1px;
+	border-bottom: solid 1px #bbb;
 	font-size: medium; color: #444;
 }
 
 p {
 	margin: 0px; padding: 10px;
-	border-left: solid black 10px;
+	border-left: solid 10px #000;
 	color: #444;
 }
 
@@ -89,23 +93,23 @@ small {
 strong {
 	padding: 4px; background: #444;
 	border-radius: 4px;
-	font-style: normal; color: white;
+	font-style: normal; color: #fff;
 }
 
 table {
-	width: 100%; background: white;
-	border-bottom: solid #bbb 1px;
+	width: 100%; background: #fff;
+	border-bottom: solid 1px #bbb;
 	font-family: georgia, monospace; font-size: small; color: #444;
 }
 
 td {
 	width: 4%;
-	border-bottom: solid white 4px;
+	border-bottom: solid 4px #fff;
 	text-align: center;
 }
 
 time {
-	border-bottom: dotted #444 1px;
+	border-bottom: dotted 1px #444;
 }
 
 time.relative {
@@ -148,7 +152,7 @@ time.relative {
 }
 
 .next {
-	border-bottom: solid lightgreen 4px;
+	border-bottom: solid 4px lightgreen;
 }
 
 td.now {
@@ -161,7 +165,7 @@ time.now {
 
 .comment {
 	display: none; padding-bottom: 14px; background: #ffa;
-	border-left-color: orange; border-left-width: 12px; border-bottom: dashed orange 1px;
+	border-left-color: orange; border-left-width: 12px; border-bottom: dashed 1px orange;
 	font-family: verdana, sans-serif; font-size: small; color: #444;
 }
 
@@ -179,7 +183,9 @@ time.now {
 }
 
 .toggle {
-	display: block; cursor: pointer;
+	position: fixed; bottom: 0px; opacity: .75;
+	display: block; width: 100%; float: left;
+	cursor: pointer;
 }
 
 #brewer-north { border-left-color: #bee2bb }
@@ -194,35 +200,48 @@ time.now {
 #mt-hope-ave { border-left-color: #808080 }
 #black-bear-express { border-left-color: #00adff }
 
+.oldtown {
+	background: #2ab098;
+	color: #fff;
+}
+
 #map {
 	background: #bbb;
-	height: 180px;
+	height: 320px;
 }
 
-.oldtown {
-	background: blue;
-	border-color: red;
-	color: white;
-}
-
+/*
 .linestring {
-	
+	stroke: red;
+	stroke-color: red;
+	background: red;
+	border-color: red;
+	color: red;
 }
+*/
 
 .point {
-	padding: 4px; background: #2ab098; vertical-align: middle;
-	border-radius: 4px;
-	text-align: center; color: white;
+	text-transform: uppercase;
+}
+
+.leaflet-container a {
+	border-bottom: none;
 }
 
 @media (min-width: 768px) {
 
 	#outbound {
 		float: left; width: 49%;
+		margin-bottom: 41px; /* Accomodate commentary toggle */
 	}
 
 	#inbound {
 		float: right; width: 50%;
 	}
 
+}
+
+/* Accomodate commentary toggle */
+#inbound {
+	margin-bottom: 41px;
 }

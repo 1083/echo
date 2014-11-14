@@ -1,12 +1,15 @@
 Echo = {}
 
-Echo.toggleComments = function(self) {
+Echo.commentary = function(self) {
 	var text = self['textContent']? 'textContent' : 'innerHTML';
 	var mode = self[text].split(/\s/)[0] || "Show";
-	self[text] = (mode == "Show"? "Hide" : "Show") + " Design Comments";
+	self[text] = (mode == "Show"? "Hide" : "Show") + " Design Commentary";
 	var comments = document.getElementsByTagName('p');
-	for (var i=1, l=comments.length; i<l; i++) {
-		if (comments[i].className == 'comment') {
+	for (var i=0, l=comments.length; i<l; i++) {
+		if (i == l-1) { // Reached end of commentary
+			window.scrollTo(0, 0)
+		}
+		else if (comments[i].className == 'comment') {
 			comments[i].style.display = mode == "Show"? 'block' : 'none';
 		}
 	}
@@ -18,10 +21,8 @@ Echo.features = {
 		{
 			"type": "Feature",
 			"properties": {
-				"title": "Bangor Depot",
 				"marker-symbol": "a",
-				"marker-size": "large",
-				"marker-color": "#2ab098",
+				"title": "Bangor Depot",
 				"description": "Pickering Square.",
 				"address": "100 Broad St, Bangor"
 			},
@@ -36,10 +37,8 @@ Echo.features = {
 		{
 			"type": "Feature",
 			"properties": {
-				"title": "EMMC",
 				"marker-symbol": "b",
-				"marker-size": "large",
-				"marker-color": "#2ab098",
+				"title": "EMMC",
 				"description": "Eastern Maine Medical Center.",
 				"address": "489 State St, Bangor"
 			},
@@ -54,10 +53,8 @@ Echo.features = {
 		{
 			"type": "Feature",
 			"properties": {
-				"title": "Veazie",
 				"marker-symbol": "c",
-				"marker-size": "large",
-				"marker-color": "#2ab098",
+				"title": "Veazie",
 				"description": "Community Center.",
 				"address": "Veazie"
 			},
@@ -72,10 +69,8 @@ Echo.features = {
 		{
 			"type": "Feature",
 			"properties": {
-				"title": "UMaine",
 				"marker-symbol": "d",
-				"marker-size": "large",
-				"marker-color": "#2ab098",
+				"title": "UMaine",
 				"description": "University of Maine Memorial Union.",
 				"address": "Orono"
 			},
@@ -90,10 +85,8 @@ Echo.features = {
 		{
 			"type": "Feature",
 			"properties": {
-				"title": "Old Town",
 				"marker-symbol": "e",
-				"marker-size": "large",
-				"marker-color": "#2ab098",
+				"title": "Old Town",
 				"description": "Downtown Old Town.",
 				"address": "Main St, Old Town"
 			},
@@ -108,10 +101,8 @@ Echo.features = {
 		{
 			"type": "Feature",
 			"properties": {
-				"title": "Stillwater Plaza",
 				"marker-symbol": "f",
-				"marker-size": "large",
-				"marker-color": "#2ab098",
+				"title": "Stillwater Plaza",
 				"description": "Hannaford, Aubuchon Hardware, Family Dollar, YMCA, Olympia Sports, restaurants.",
 				"address": "494 Stillwater Ave, Old Town"
 			},
@@ -126,10 +117,8 @@ Echo.features = {
 		{
 			"type": "Feature",
 			"properties": {
-				"title": "University Mall",
 				"marker-symbol": "g",
-				"marker-size": "large",
-				"marker-color": "#2ab098",
+				"title": "University Mall",
 				"description": "Bell's IGA, Dollar Tree, Spotlight Cinemas, restaurants.",
 				"address": "6 Stillwater Ave, Orono"
 			},
@@ -144,10 +133,8 @@ Echo.features = {
 		{
 			"type": "Feature",
 			"properties": {
-				"title": "Orono Research Park",
 				"marker-symbol": "h",
-				"marker-size": "large",
-				"marker-color": "#2ab098",
+				"title": "Orono Research Park",
 				"description": "R&D facility and office space.",
 				"address": "17 Godfrey Dr, Orono"
 			},
@@ -163,10 +150,9 @@ Echo.features = {
 			"type": "Feature",
 			"properties": {
 				"title": "Oldtown",
-				"description": "Bangor, Veazie, Orono, University of Maine, Old Town. Passenger transport since 1835.",
-				"stroke": "#444",
-				"stroke-width": 5,
-				"stroke-opacity": 0.6
+				"description": "Old Town, Orono, University of Maine.",
+				"className": "oldtown",
+				"tripType": "secondary"
 			},
 			"geometry": {
 				"type": "LineString",
@@ -338,10 +324,9 @@ Echo.features = {
 			"type": "Feature",
 			"properties": {
 				"title": "Oldtown",
-				"description": "Bangor, Veazie, Orono, University of Maine, Old Town. Passenger transport since 1835.",
-				"stroke": "#2ab098",
-				"stroke-width": 5,
-				"stroke-opacity": 0.6
+				"description": "Bangor, Veazie, Orono, University of Maine, Old Town.",
+				"className": "oldtown",
+				"tripType": "primary"
 			},
 			"geometry": {
 				"type": "LineString",
@@ -1836,32 +1821,69 @@ Echo.features = {
 	]
 }
 
-Echo.renderMap = function() {
+Echo.stop = function(feature) {
+	return L.popup()
+		// .className(feature.)
+		.setContent(
+			'<b>'+feature.properties.title+'</b><br>'+
+			feature.properties.description
+		)
+}
 
-	var map = L.map('map').setView([44.799798, -68.770634], 9)
+Echo.routes = {
+	oldtown: {
+		color: '#2ab098'
+	}
+}
+
+Echo.tripTypes = {
+	primary: [],
+	secondary: [1, 6]
+}
+
+Echo.map = function() {
+
+	var center = [44.8665, -68.70]
+
+	var map = L.map('map').setView(center, 11)
 
 	L.tileLayer('http://{s}.tiles.mapbox.com/v3/MapID/{z}/{x}/{y}.png', {
 		attribution: "",
-		maxZoom: 18
+		minZoom: 10,
+		maxZoom: 15,
+		// TODO bounds
 	}).addTo(map)
 
 	L.geoJson(Echo.features, {
 		style: function(feature) {
-			return {
-				'color': feature.properties.stroke
+			var props = feature.properties
+			if (props.className) {
+				return {
+					color: Echo.routes[props.className].color,
+					dashArray: Echo.tripTypes[props.tripType]
+				}
 			}
 		},
 		pointToLayer: function(feature, latlng) {
 			return L.marker(latlng, {
-				radius: 8,
-				color: feature.properties.stroke,
 				icon: L.divIcon({
 					className: 'point',
-					// iconSize: 30,
-					html: feature.properties['marker-symbol']
+					html: '<strong class="oldtown">' + feature.properties['marker-symbol'] + '</strong>'
 				})
-			})
+			}).bindPopup(Echo.stop(feature))
 		}
 	}).addTo(map)
+
+}
+
+// TODO onhashchange
+
+Echo.main = function() {
+
+	Echo.map()
+
+	if (document.location.hash == '#commentary') {
+		Echo.commentary()
+	}
 
 }
