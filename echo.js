@@ -1845,6 +1845,23 @@ Echo.renderMap = function() {
 		maxZoom: 18
 	}).addTo(map)
 
-	L.geoJson(Echo.features).addTo(map)
+	L.geoJson(Echo.features, {
+		style: function(feature) {
+			return {
+				'color': feature.properties.stroke
+			}
+		},
+		pointToLayer: function(feature, latlng) {
+			return L.marker(latlng, {
+				radius: 8,
+				color: feature.properties.stroke,
+				icon: L.divIcon({
+					className: 'point',
+					// iconSize: 30,
+					html: feature.properties['marker-symbol']
+				})
+			})
+		}
+	}).addTo(map)
 
 }

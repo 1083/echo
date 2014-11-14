@@ -14,7 +14,7 @@ address {
 
 body {
 	margin: 0px; background: #333;
-	font-family: "Futura Extra Bold", "Arial Black", helvetica, sans-serif;
+	font-family: 'Arial Black', helvetica, arial, sans-serif;
 }
 
 h1, h2, h3 {
@@ -197,6 +197,22 @@ time.now {
 #map {
 	background: #bbb;
 	height: 180px;
+}
+
+.oldtown {
+	background: blue;
+	border-color: red;
+	color: white;
+}
+
+.linestring {
+	
+}
+
+.point {
+	padding: 4px; background: #2ab098; vertical-align: middle;
+	border-radius: 4px;
+	text-align: center; color: white;
 }
 
 @media (min-width: 768px) {
