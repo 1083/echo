@@ -75,15 +75,6 @@ p {
 	color: #444;
 }
 
-p.description {
-	border-left: none;
-	font-style: italic; color: #999;
-}
-
-.leaflet-popup-content-wrapper {
-	background: lightyellow !important;
-}
-
 s {
 	color: #ddd;
 }
@@ -259,3 +250,18 @@ time.now {
 /*#inbound {
 	margin-bottom: 41px;
 }*/
+
+h4.popup {
+	margin-bottom: 0px; padding: 2px;
+	border-bottom: none;
+}
+
+p.popup {
+	margin: 8px 0px !important; background: white;
+	border: solid 1px #eee;
+	font-style: italic; color: #444;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+	background: lightyellow !important;
+}

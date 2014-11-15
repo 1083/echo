@@ -1755,8 +1755,8 @@ Echo.markers = {}
 Echo.stop = function(feature) {
 	return L.popup()
 		.setContent(
-			'<h4><em>'+feature.properties.title+'</em></h4>'+
-			'<p class="description">'+feature.properties.description+'</p>'+
+			'<h4 class="popup"><em>'+feature.properties.title+'</em></h4>'+
+			'<p class="popup">'+feature.properties.description+'</p>'+
 			'<address>'+feature.properties.address+'<address>'
 		)
 }
