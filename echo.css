@@ -230,7 +230,6 @@ time.now {
 
 .leaflet-container a {
 	border-bottom: none;
-	color: #2ab098 !important; /* TODO hardcoded */
 }
 
 @media (min-width: 768px) {
