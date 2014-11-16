@@ -1,0 +1,33 @@
+small {
+	position: absolute; margin-top: -1px; width: 100%;
+	text-align: center; font-family: sans-serif; font-size: x-small; color: #ddd;
+}
+
+.comment {
+	display: none; padding-bottom: 14px; background: #ffa;
+	border-left-color: #ffa500; border-left-width: 12px; border-bottom: dashed 1px #ffa500;
+	font-family: verdana, sans-serif; font-size: small; color: #444;
+}
+
+.comment strong {
+	float: left; margin-right: 6px; padding: 2px;
+}
+
+.comment a {
+	display: inline;
+	color: inherit;
+}
+
+.right {
+	float: right !important;
+}
+
+.toggle {
+	/* position: fixed; bottom: 0px; opacity: .7; z-index: 9999; */
+	display: block; width: 100%; float: left;
+	cursor: pointer;
+}
+
+.toggle a {
+	display: block; width: 100%;
+}

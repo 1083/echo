@@ -3,15 +3,23 @@
 <head>
 	<title>Oldtown - Echo Transit</title>
 	<link rel="shortcut icon" href="favicon.ico">
-	<link type="text/css" rel="stylesheet" href="echo.css">
+	<link type="text/css" rel="stylesheet" href="styles/base.css">
+	<link type="text/css" rel="stylesheet" href="styles/commentary.css">
+	<link type="text/css" rel="stylesheet" href="styles/routes.css">
+	<link type="text/css" rel="stylesheet" href="styles/map.css">
+	<link type="text/css" rel="stylesheet" href="styles/timetable.css">
 	<link type="text/css" rel="stylesheet" href="lib/leaflet-0.7.3/leaflet.css">
 	<script type="application/javascript" src="lib/leaflet-0.7.3/leaflet.js"></script>
-	<script type="application/javascript" src="echo.js"></script>
+	<script type="application/javascript" src="scripts/base.js"></script>
+	<script type="application/javascript" src="scripts/commentary.js"></script>
+	<script type="application/javascript" src="scripts/routes.js"></script>
+	<script type="application/javascript" src="scripts/map.js"></script>
+	<script type="application/javascript" src="scripts/timetable.js"></script>
 	<meta name="author" content="Max Terry">
 	<meta name="description" content="Transit tracker for Bangor, Veazie, Orono, and Old Town, Maine.">
 	<meta name="keywords" content="transit,rail,train,tram,trolley,streetcar,amtrak,bus,coaches,carriages">
 </head>
-<body onload="Echo.main()">
+<body onload="Echo.map.render()">
 	<p class="comment">
 		<strong>&darr;</strong>
 		Absolute time is only included for this markup mockup,

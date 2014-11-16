@@ -1,0 +1,32 @@
+h2.active {
+	background: #fffccf;
+	color: #444;
+}
+
+h2.active:hover {
+	background: #fffccf;
+	color: #222;
+}
+
+h2.current {
+	background: #ffe;
+	color: #222;
+}
+
+#brewer-north { border-left-color: #bee2bb }
+#brewer-south { border-left-color: #ff9b69 }
+#capehart { border-left-color: #3c612d }
+#hammond-st { border-left-color: #ffd787 }
+#hampden { border-left-color: #8846a6 }
+#mall-hopper { border-left-color: #c51446 }
+#oldtown { border-left-color: #2ab098 }
+#stillwater-ave { border-left-color: #3e379a }
+#center-st { border-left-color: #d2d2d2 }
+#mt-hope-ave { border-left-color: #808080 }
+#black-bear-express { border-left-color: #00adff }
+
+.oldtown {
+	background: #2ab098;
+	border-left-color: #2ab098;
+	color: #fff;
+}

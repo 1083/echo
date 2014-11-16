@@ -1,0 +1,70 @@
+s {
+	color: #ddd;
+}
+
+table {
+	width: 100%; background: #fff;
+	border-bottom: solid 1px #bbb;
+	font-family: georgia, monospace; font-size: small; color: #444;
+}
+
+td {
+	width: 4%;
+	border-bottom: solid 4px #fff;
+	text-align: center;
+}
+
+td.minutes {
+	border-left: dotted #444 1px;
+}
+
+td.minutes:before {
+	content: ":";
+}
+
+td.coming {
+	font-weight: bold;
+}
+
+td.next {
+	border-bottom: solid 4px #90ee90;
+}
+
+td.now {
+	border-bottom-color: #f77373;
+}
+
+time {
+	border-bottom: dotted 1px #444;
+}
+
+time.relative {
+	float: right; margin-top: -3px; padding: 4px; background: #90ee90;
+	border: none; border-radius: 4px;
+	font-size: medium; color: #444;
+}
+
+time.now {
+	background: #f77373;
+}
+
+@media (min-width: 768px) {
+
+	#outbound {
+		float: left; width: 49%;
+		/* Accomodate commentary toggle */
+		/* margin-bottom: 41px; */
+	}
+
+	#inbound {
+		float: right; width: 50%;
+	}
+
+}
+
+/* Accomodate commentary toggle */
+/*
+#inbound {
+	margin-bottom: 41px;
+}
+*/

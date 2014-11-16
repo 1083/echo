@@ -1,0 +1,78 @@
+a {
+	text-decoration: none; color: #aaa;
+	cursor: pointer;
+}
+
+a em {
+	border-bottom: solid 1px #bbb;
+}
+
+abbr {
+	border-bottom: dotted 1px #888;
+}
+
+address, p {
+	display: block; margin: 0px; padding: 10px;
+	border-left: solid 10px #000;
+	font-family: verdana, sans-serif; font-size: small; font-style: normal; color: #444;
+}
+
+body {
+	margin: 0px; background: #333;
+	font-family: 'Arial Black', helvetica, arial, sans-serif;
+}
+
+h1, h2, h3 {
+	border-left: solid 12px #333;
+	text-transform: uppercase; font-weight: bold;
+}
+
+h1 {
+	margin: 0; padding: 12px; background: #eb0000;
+	border-top: solid 12px #800;
+	font-weight: bold; color: #fff;
+}
+
+@media (max-width: 364px) {
+	h1 {
+		font-size: x-large;
+	}
+}
+
+h2 {
+	margin: 0px; padding: 12px; background: #fff;
+	border-left: solid #fff 12px;
+	text-transform: uppercase;
+}
+
+h2 a, h4 a {
+	display: inline; color: inherit;
+}
+
+h3, h4, h5 {
+	margin: 0px;
+	font-family: helvetica, arial, sans-serif;
+}
+
+h3 {
+	padding: 4px;
+	text-align: center; font-size: x-small; color: #fff;
+}
+
+h4 {
+	display: block; padding: 10px; background: #ffffe0;
+	border-bottom: solid 1px #bbb;
+	font-size: large; color: #444;
+}
+
+h5 {
+	display: block; margin: 0px; padding: 10px; background: #ffffe0;
+	border-bottom: solid 1px #bbb;
+	font-size: medium; color: #444;
+}
+
+strong {
+	padding: 4px; background: #444;
+	border-radius: 4px;
+	font-style: normal; color: #fff;
+}

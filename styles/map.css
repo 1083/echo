@@ -1,0 +1,36 @@
+#map {
+	height: 320px; background: #bbb;
+	border-top: solid 1px #bbb;
+}
+
+.point {
+	text-transform: uppercase;
+}
+
+.leaflet-container a {
+	border-bottom: none;
+}
+
+h4.popup {
+	margin-bottom: 0px; padding: 2px;
+	border-bottom: none;
+}
+
+p.popup {
+	margin: 8px 0px !important; background: #fff;
+	border: solid 1px #eee;
+	font-family: verdana, sans-serif; font-size: small; color: #444;
+}
+
+address.popup {
+	border: none;
+	text-align: center; font-family: georgia;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+	background: #ffffe0 !important;
+}
+
+.reset {
+	font: bold 18px 'Lucida Console', Monaco, monospace;
+}

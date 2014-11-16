@@ -1,21 +1,24 @@
-Echo = {}
+Echo.routes = {}
 
-Echo.commentary = function(self) {
-	var text = self['textContent']? 'textContent' : 'innerHTML';
-	var mode = self[text].split(/\s/)[0] || "Show";
-	self[text] = (mode == "Show"? "Hide" : "Show") + " Design Commentary";
-	var comments = document.getElementsByTagName('p');
-	for (var i=0, l=comments.length; i<l; i++) {
-		if (i == l-1) { // Reached end of commentary
-			window.scrollTo(0, 0)
-		}
-		else if (comments[i].className == 'comment') {
-			comments[i].style.display = mode == "Show"? 'block' : 'none';
-		}
+// TODO hardcoded
+
+Echo.routes.oldtown = {
+	color: '#2ab098',
+	coords: {
+		init: [44.8665, -68.70],
+		max: [
+			[45, -68.23814392089844],
+			[44.788657917188104, -69.16168212890625]
+		]
+	},
+	zoom: {
+		init: 11,
+		min: 10,
+		max: 15
 	}
 }
 
-Echo.features = {
+Echo.routes.oldtown.features = {
 	"type": "FeatureCollection",
 	"features": [
 		{
@@ -1735,111 +1738,4 @@ Echo.features = {
 			}
 		}
 	]
-}
-
-Echo.routes = {
-	oldtown: {
-		color: '#2ab098'
-	}
-}
-
-Echo.tripTypes = {
-	primary: [],
-	secondary: [1, 6]
-}
-
-Echo.map = null
-
-Echo.markers = {}
-
-Echo.stop = function(feature) {
-	return L.popup()
-		.setContent(
-			'<h4 class="popup"><em>'+feature.properties.title+'</em></h4>'+
-			'<p class="popup">'+feature.properties.description+'</p>'+
-			'<address>'+feature.properties.address+'<address>'
-		)
-}
-
-Echo.createMarker = function(feature, latlng) {
-	var stopId = feature.properties['marker-symbol']
-	var marker = L.marker(latlng, {
-		icon: L.divIcon({
-			className: 'point',
-			html: '<strong id="'+stopId+'" class="oldtown">'+stopId+'</strong>'
-		})
-	}).bindPopup(Echo.stop(feature))
-	Echo.markers[stopId] = marker
-	return marker
-}
-
-Echo.getStop = function(stopId) {
-	if (Echo.markers[stopId]) {
-		var marker = Echo.markers[stopId]
-		Echo.map.panTo(marker.getLatLng())
-		document.getElementById(stopId).click()
-	}
-}
-
-window.onhashchange = function(scrollTop) {
-	var hash = document.location.hash.substr(1).toLowerCase()
-	hash == 'commentary'? Echo.commentary() : Echo.getStop(hash)
-	if (scrollTop !== false) document.body.scrollTop = 0 // TODO check cross-browser
-}
-
-Echo.main = function() {
-
-	var tiles = L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', {
-		attribution: "Data &copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors<br>| Maps &copy; <a href=\"http://thunderforest.com\">Thunderforest</a>"
-	})
-
-	var RecenterControl = L.Control.extend({
-		initialize: function (foo, options) {
-			L.Util.setOptions(this, options)
-		},
-		options: {
-				position: 'bottomleft'
-		},
-		onAdd: function (map) {
-				var container = L.DomUtil.create('div', 'thing')
-				// TODO listener
-				map.addEventListener('click', function(e) {
-					alert("Recenter dude!")
-				})
-				return container
-		}
-	})
-
-	Echo.map = L.map('map', {
-		layers: tiles,
-		center: [44.8665, -68.70],
-		zoom: 11,
-		minZoom: 10,
-		maxZoom: 15,
-		maxBounds: [
-			[45, -68.23814392089844],
-			[44.788657917188104, -69.16168212890625]
-		],
-		scrollWheelZoom: false // because annoying
-	})
-		.addControl(new RecenterControl())
-
-	L.geoJson(Echo.features, {
-		style: function(feature) {
-			var props = feature.properties
-			if (props.className) {
-				return {
-					opacity: .7,
-					color: Echo.routes[props.className].color,
-					dashArray: Echo.tripTypes[props.tripType]
-				}
-			}
-		},
-		pointToLayer: function(feature, latlng) {
-			return Echo.createMarker(feature, latlng)
-		}
-	}).addTo(Echo.map)
-
-	window.onhashchange(false)
-
 }
