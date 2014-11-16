@@ -7,15 +7,8 @@ Echo.map.tripTypes = {
 	secondary: [1, 6]
 }
 
-Echo.map.createPopup = function(feature, stopId) {
-	// stopId = stopId || ''
+Echo.map.createPopup = function(feature) {
 	return L.popup()
-		.on('close', function() {
-			document.location.hash = ''
-		})
-		.on('open', function() {
-			document.location.hash = stopId
-		})
 		.setContent(
 			'<h4 class="popup"><em>'+feature.properties.title+'</em></h4>'+
 			'<p class="popup">'+feature.properties.description+'</p>'+
@@ -34,23 +27,19 @@ Echo.map.createMarker = function(feature, latlng) {
 		})
 	}
 	var marker = L.marker(latlng, options)
-		.bindPopup(Echo.map.createPopup(feature, stopId))
+		.bindPopup(Echo.map.createPopup(feature))
 	Echo.map.markers[stopId] = marker
 	return marker
 }
 
-Echo.map.getStop = function(stopId) {
+Echo.map.selectStop = function(stopId) {
+	stopId = stopId.toLowerCase()
 	if (Echo.map.markers[stopId]) {
 		var marker = Echo.map.markers[stopId]
 		Echo.map.element.panTo(marker.getLatLng())
 		document.getElementById(stopId).click()
+		document.body.scrollTop = 0 // TODO check cross-browser
 	}
-}
-
-window.onhashchange = function(scrollTop) {
-	var hash = document.location.hash.substr(1).toLowerCase()
-	hash == 'commentary'? Echo.commentary() : Echo.map.getStop(hash)
-	if (scrollTop !== false) document.body.scrollTop = 0 // TODO check cross-browser
 }
 
 Echo.map.render = function() {
@@ -90,13 +79,17 @@ Echo.map.render = function() {
 		div = L.DomUtil.create('div', 'leaflet-bar')
 		div.innerHTML = '<a class="reset" title="Reset">&Equilibrium;</a>'
 		div.onclick = function() {
-			Echo.map.element.setView([44.8665, -68.70])
+			// TODO Can set one, or the other, but not both...
+			Echo.map.element.setView(route.coords.init)
 			// Echo.map.element.setZoom(route.zoom.init)
 		}
 		return div
 	}
 	reset.addTo(Echo.map.element)
 
-	window.onhashchange(false)
+	// The commentary won't stick around too long
+	if (document.location.hash == '#commentary') {
+		document.getElementById('commentary').click()
+	}
 
 }

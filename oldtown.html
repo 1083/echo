@@ -22,10 +22,14 @@
 <body onload="Echo.map.render()">
 	<p class="comment">
 		<strong>&darr;</strong>
-		Absolute time is only included for this markup mockup,
-		to make clear that the time is noon.
+		The timetable isn't dynamic yet&mdash;assume it's noon ET.
 	</p>
-	<small title="Static Time for Demonstration">12:00 EST</small>
+	<a id="commentary" onclick="Echo.commentary(this)">
+		Show Commentary
+	</a>
+	<small>
+		12:00 EST
+	</small>
 	<a href="index.html">
 		<h1>
 			<img src="logo.png">
@@ -34,14 +38,12 @@
 	</a>
 	<p class="comment">
 		<strong>&uarr;</strong>
-		Bats &ndash; visualize via echolocation, under-utilized graphically, suggest transit maps' "bat's eye view".
-		The logo is meant to stand uniquely from other depictions of the flying rodent (and kinda resembles a side-ways "E" too).
-		<br><br>
-		Red is meant to raise energy, trigger action (i.e. catching the ride).
+		Bats, of course, use echolocation for visualization.
+		But this is just a working title/logo.
 	</p>
 	<p class="comment">
 		<strong>&darr;</strong>
-		The typeface is Arial Black. Futura, eventually?
+		The typeface is Arial Black. Perhaps Futura eventually.
 	</p>
 	<h2 id="oldtown">
 		<a class="current" href="http://www.bangormaine.gov/?id=2&sub_id=2744" target="_blank">
@@ -63,16 +65,14 @@
 	</div>
 	<p class="comment">
 		<strong>&darr;</strong>
-		The "<a href="#outbound">Outbound</a>" and "<a href="#inbound">Inbound</a>"
+		The "<em>Outbound</em>" and "<em>Inbound</em>"
 		timetables stack for screen widths under 768px.
 	</p>
 	<div id="outbound">
-		<a href="#outbound">
-			<h3 class="oldtown">
-				Outbound
-			</h3>
-		</a>
-		<a href="#A">
+		<h3 class="oldtown">
+			Outbound
+		</h3>
+		<a onclick="Echo.map.selectStop('A')">
 			<h4 id="bangor-outbound" title="100 Broad St, Bangor">
 				<strong class="oldtown">A</strong>
 				<em>Bangor Depot</em>
@@ -85,11 +85,6 @@
 			other lines may enumerate differently.
 			The stop name currently links to Google Street View;
 			hover over for address.
-		</p>
-		<p class="comment">
-			<strong class="right">&uarr;</strong>
-			Relative time to next stop;
-			hover over for <a href="http://xkcd.com/1179">ISO 8601</a> representation.
 		</p>
 		<table class="times">
 			<tr>
@@ -131,20 +126,9 @@
 			unless it's currently the closest stop, then light red.
 			<br>
 			<br>
-			The typeface is Georgia, with varied ascenders and descenders that're optimal for Arabic numeral legibility <abbr title="in my humble opinion">IMHO</abbr>.
+			Georgia's varied ascenders and descenders are optimal for Arabic numeral legibility <abbr title="in my humble opinion">IMHO</abbr>.
 		</p>
-		<p class="comment">
-			<strong class="right">&uarr;</strong>
-			The hours and minutes are split apart this way from personal experience:
-			if I know the bus comes for the next four hours at :15,
-			I feel like I've more flexibility,
-			since it's easier to remember and consider in short term memory (brain RAM)
-			without need to keep checking back to a screen.
-			<br><br>
-			A good transit app should quickly render itself unnecessary for oft-ridden routes,
-			with the user quickly memorizing stop locations and times.
-		</p>
-		<a href="#B">
+		<a onclick="Echo.map.selectStop('B')">
 			<h4 id="emmc-outbound" title="489 State St, Bangor">
 				<strong class="oldtown">B</strong>
 				<em>EMMC</em>
@@ -202,7 +186,7 @@
 			This layout would seem a good teaching tool for memorizing 24h time,
 			with the afternoon times right below their <abbr title="post meridiem">p.m.</abbr> equivalent.
 		</p>
-		<a href="#C">
+		<a onclick="Echo.map.selectStop('C')">
 			<h4 id="veazie-outbound" title="">
 				<strong class="oldtown">C</strong>
 				<em>Veazie</em>
@@ -240,7 +224,7 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<a href="#D">
+		<a onclick="Echo.map.selectStop('D')">
 			<h4 id="umaine-outbound" title="">
 				<strong class="oldtown">D</strong>
 				<em>UMaine</em>
@@ -278,7 +262,7 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<a href="#E">
+		<a onclick="Echo.map.selectStop('E')">
 			<h4 id="old-town-outbound" title="Main St, Old Town">
 				<strong class="oldtown">E</strong>
 				<em>Old Town</em>
@@ -316,17 +300,13 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<a href="#F">
+		<a onclick="Echo.map.selectStop('F')">
 			<h4 id="stillwater-plaza-outbound" title="494 Stillwater Ave, Old Town">
 				<strong class="oldtown">F</strong>
 				<em>Stillwater Plaza</em>
 				<time class="relative now" title="2014-11-04T12:01-0500" datetime="2014-11-04T12:01-0500">1 min</time>
 			</h4>
 		</a>
-		<p class="comment">
-			<strong>&uarr;</strong>
-			The stops on the return trip are listed geographically,
-			proceeding in reverse alphabetical order.
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -364,7 +344,7 @@
 			(denoted in light red).
 			Initially should just be the next one.
 		</p>
-		<a href="#G">
+		<a onclick="Echo.map.selectStop('G')">
 			<h4 id="university-mall-outbound" title="6 Stillwater Ave, Orono">
 				<strong class="oldtown">G</strong>
 				<em>University Mall</em>
@@ -464,7 +444,7 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<a href="#H">
+		<a onclick="Echo.map.selectStop('H')">
 			<h4 id="orono-research-park-outbound" title="19 Godfrey Dr, Orono">
 				<strong class="oldtown">H</strong>
 				<em>Orono Research Park</em>
@@ -535,12 +515,10 @@
 		</table>
 	</div>
 	<div id="inbound">
-		<a href="#inbound">
-			<h3 class="oldtown">
-				Inbound
-			</h3>
-		</a>
-		<a href="#F">
+		<h3 class="oldtown">
+			Inbound
+		</h3>
+		<a onclick="Echo.map.selectStop('F')">
 			<h4 id="stillwater-plaza-inbound" title="494 Stillwater Ave, Old Town">
 				<strong class="oldtown">F</strong>
 				<em>Stillwater Plaza</em>
@@ -578,6 +556,17 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
+		<p class="comment">
+			<strong class="right">&uarr;</strong>
+			The hours and minutes are split apart this way from personal experience:
+			if I know the bus comes for the next four hours at :15,
+			I feel like I've more flexibility,
+			since it's easier to remember and consider in short term memory (brain RAM)
+			without need to keep checking back to a screen.
+			<br><br>
+			A good transit app should quickly render itself unnecessary for oft-ridden routes,
+			with the user quickly memorizing stop locations and times.
+		</p>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -609,7 +598,7 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<a href="#E">
+		<a onclick="Echo.map.selectStop('E')">
 			<h4 id="old-town-inbound" title="Main St, Old Town">
 				<strong class="oldtown">E</strong>
 				<em>Old Town</em>
@@ -678,7 +667,12 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<a href="#D">
+		<p class="comment">
+			<strong style="margin-right: 24px" class="right">&darr;</strong>
+			Relative time to next stop;
+			hover over for <a href="http://xkcd.com/1179">ISO 8601</a> representation.
+		</p>
+		<a onclick="Echo.map.selectStop('D')">
 			<h4 id="umaine-inbound" title="">
 				<strong class="oldtown">D</strong>
 				<em>UMaine</em>
@@ -716,7 +710,7 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<a href="#C">
+		<a onclick="Echo.map.selectStop('C')">
 			<h4 id="veazie-inbound" title="">
 				<strong class="oldtown">C</strong>
 				<em>Veazie</em>
@@ -785,13 +779,18 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<a href="#B">
+		<a onclick="Echo.map.selectStop('B')">
 			<h4 id="emmc-inbound" title="489 State St, Bangor">
 				<strong class="oldtown">B</strong>
 				<em>EMMC</em>
 				<time class="relative" title="2014-11-04T12:50-0500" datetime="2014-11-04T12:50-0500">50 min</time>
 			</h4>
 		</a>
+		<p class="comment">
+			<strong>&uarr;</strong>
+			The stops on the return trip are listed geographically,
+			proceeding in reverse alphabetical order.
+		</p>
 		<table class="times">
 			<tr>
 				<td><s>00</s></td>
@@ -823,7 +822,7 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-		<a href="#A">
+		<a onclick="Echo.map.selectStop('A')">
 			<h4 id="bangor-inbound" title="100 Broad St, Bangor">
 				<strong class="oldtown">A</strong>
 				<em>Bangor Depot</em>
@@ -900,10 +899,5 @@
 			2 separate buses are running concurrently.
 		</p>
 	</div>
-	<p class="comment toggle">
-		<a onclick="Echo.commentary(this)">
-			Show Design Commentary
-		</a>
-	</p>
 </body>
 </html>
