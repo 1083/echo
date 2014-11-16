@@ -78,10 +78,8 @@ Echo.map.render = function() {
 	reset.onAdd = function(map) {
 		div = L.DomUtil.create('div', 'leaflet-bar')
 		div.innerHTML = '<a class="reset" title="Reset">&Equilibrium;</a>'
-		div.onclick = function() {
-			// TODO Can set one, or the other, but not both...
-			Echo.map.element.setView(route.coords.init)
-			// Echo.map.element.setZoom(route.zoom.init)
+		div.onclick = function() { // TODO Prevent bubbling up
+			Echo.map.element.setView(route.coords.init, route.zoom.init)
 		}
 		return div
 	}
