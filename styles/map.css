@@ -33,4 +33,5 @@ address.popup {
 
 .reset {
 	font: bold 18px 'Lucida Console', Monaco, monospace;
+	line-height: 28px !important;
 }

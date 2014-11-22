@@ -47,7 +47,7 @@ Echo.map.render = function() {
 	var route = Echo.routes.oldtown // TODO hardcoded
 
 	var tiles = L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', {
-			attribution: "Data &copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors | Map &copy; <a href=\"http://thunderforest.com\">Thunderforest</a>"
+			attribution: "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors | &copy; <a href=\"http://thunderforest.com\">Thunderforest</a>"
 		})
 
 	Echo.map.element = L.map('map', {

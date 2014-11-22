@@ -24,7 +24,7 @@ small {
 
 #commentary {
 	/* position: fixed; bottom: 0px; opacity: .7; z-index: 9999; */
-	display: block; float: right; padding: 10px; background: #ffa;
-	border-left-color: #ffa500; border-left-width: 12px; border-bottom: dashed 1px #ffa500;
+	display: block; padding: 10px; background: #ffa;
+	border-left: solid 12px #ffa500; border-bottom: dashed 1px #ffa500;
 	font-family: verdana, sans-serif; font-size: small; color: #444;
 }

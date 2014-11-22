@@ -3,13 +3,13 @@
 <head>
 	<title>Oldtown - Echo Transit</title>
 	<link rel="shortcut icon" href="favicon.ico">
-	<link type="text/css" rel="stylesheet" href="styles/base.css">
-	<link type="text/css" rel="stylesheet" href="styles/commentary.css">
-	<link type="text/css" rel="stylesheet" href="styles/routes.css">
-	<link type="text/css" rel="stylesheet" href="styles/map.css">
-	<link type="text/css" rel="stylesheet" href="styles/timetable.css">
-	<link type="text/css" rel="stylesheet" href="lib/leaflet-0.7.3/leaflet.css">
-	<script type="application/javascript" src="lib/leaflet-0.7.3/leaflet.js"></script>
+	<link type="text/css" rel="stylesheet" href="styles/base.css" />
+	<link type="text/css" rel="stylesheet" href="styles/commentary.css" />
+	<link type="text/css" rel="stylesheet" href="styles/routes.css" />
+	<link type="text/css" rel="stylesheet" href="styles/map.css" />
+	<link type="text/css" rel="stylesheet" href="styles/timetable.css" />
+	<link type="text/css" rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script type="application/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	<script type="application/javascript" src="scripts/base.js"></script>
 	<script type="application/javascript" src="scripts/commentary.js"></script>
 	<script type="application/javascript" src="scripts/routes.js"></script>
@@ -18,15 +18,16 @@
 	<meta name="author" content="Max Terry">
 	<meta name="description" content="Transit tracker for Bangor, Veazie, Orono, and Old Town, Maine.">
 	<meta name="keywords" content="transit,rail,train,tram,trolley,streetcar,amtrak,bus,coaches,carriages">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body onload="Echo.map.render()">
+	<a id="commentary" onclick="Echo.commentary(this)">
+		Show Commentary
+	</a>
 	<p class="comment">
 		<strong>&darr;</strong>
 		The timetable isn't dynamic yet&mdash;assume it's noon ET.
 	</p>
-	<a id="commentary" onclick="Echo.commentary(this)">
-		Show Commentary
-	</a>
 	<small>
 		12:00 EST
 	</small>
