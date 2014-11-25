@@ -4,7 +4,7 @@ s {
 
 table {
 	width: 100%; background: #fff;
-	border-bottom: solid 1px #bbb;
+	border-bottom: solid 2px #ddd;
 	font-family: georgia, monospace; font-size: medium; color: #444;
 }
 
@@ -15,7 +15,7 @@ td {
 }
 
 td.minutes {
-	border-left: dotted #444 1px;
+	border-left: dotted #ccc 1px;
 	font-family: courier, monospace;
 }
 
@@ -53,13 +53,17 @@ time.now {
 @media (min-width: 768px) {
 
 	#outbound {
-		float: left; width: 49%;
+		float: left; width: 50%;
 		/* Accomodate commentary toggle */
 		/* margin-bottom: 41px; */
 	}
 
 	#inbound {
 		float: right; width: 50%;
+	}
+
+	#outbound div {
+		border-right: solid 10px #eff8ff;
 	}
 
 }

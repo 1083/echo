@@ -18,7 +18,7 @@ address, p {
 }
 
 body {
-	margin: 0px; background: #eee;
+	margin: 0px; background: #eff8ff;
 	font-family: 'Arial Black', helvetica, arial, sans-serif;
 }
 
@@ -61,7 +61,7 @@ h3 {
 
 h4 {
 	display: block; margin-top: 10px; padding: 10px; background: #ffffe0;
-	border-bottom: solid 1px #bbb;
+	border: solid #fff 1px; border-top: solid 2px #fff; border-bottom: solid 2px #ddd;
 	font-size: large; color: #444;
 }
 

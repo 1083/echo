@@ -2,25 +2,30 @@
 <html lang="en-US">
 <head>
 	<title>Oldtown - Echo Transit</title>
-	<link rel="shortcut icon" href="favicon.ico">
-	<link type="text/css" rel="stylesheet" href="styles/base.css" />
-	<link type="text/css" rel="stylesheet" href="styles/commentary.css" />
-	<link type="text/css" rel="stylesheet" href="styles/routes.css" />
-	<link type="text/css" rel="stylesheet" href="styles/map.css" />
-	<link type="text/css" rel="stylesheet" href="styles/timetable.css" />
-	<link type="text/css" rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<!-- Base -->
+	<link type="text/css" rel="stylesheet" href="../echo.css">
+	<script type="application/javascript" src="../echo.js"></script>
+	<!-- Routes & Commentary -->
+	<link type="text/css" rel="stylesheet" href="commentary.css">
+	<script type="application/javascript" src="commentary.js"></script>
+	<link type="text/css" rel="stylesheet" href="routes.css">
+	<script type="application/javascript" src="routes.js"></script>
+	<!-- Maps -->
+	<link type="text/css" rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
 	<script type="application/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-	<script type="application/javascript" src="scripts/base.js"></script>
-	<script type="application/javascript" src="scripts/commentary.js"></script>
-	<script type="application/javascript" src="scripts/routes.js"></script>
-	<script type="application/javascript" src="scripts/map.js"></script>
-	<script type="application/javascript" src="scripts/timetable.js"></script>
+	<link type="text/css" rel="stylesheet" href="../geo/geo.css">
+	<script type="application/javascript" src="../geo/geo.js"></script>
+	<!-- Timetables -->
+	<link type="text/css" rel="stylesheet" href="../chrono/chrono.css">
+	<script type="application/javascript" src="../chrono/chrono.js"></script>
+	<!-- Meta -->
+	<meta name="description" content="Passenger transport maps and timetables for Bangor, Veazie, Orono, and Old Town, Maine.">
 	<meta name="author" content="Max Terry">
-	<meta name="description" content="Transit tracker for Bangor, Veazie, Orono, and Old Town, Maine.">
 	<meta name="keywords" content="transit,rail,train,tram,trolley,streetcar,amtrak,bus,coaches,carriages">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
 </head>
-<body onload="Echo.map.render()">
+<body onload="Echo.geo.render()">
 	<a id="commentary" onclick="Echo.commentary(this)">
 		Show Commentary
 	</a>
@@ -31,9 +36,9 @@
 	<small>
 		12:00 EST
 	</small>
-	<a href="index.html">
+	<a href="../index.html">
 		<h1>
-			<img src="logo.png">
+			<img src="../logo.png" alt="Bat Logo">
 			Echo Transit
 		</h1>
 	</a>
@@ -46,11 +51,11 @@
 		<strong>&darr;</strong>
 		The typeface is Arial Black. Perhaps Futura eventually.
 	</p>
-	<h2 id="oldtown">
-		<a class="current" href="http://www.bangormaine.gov/?id=2&sub_id=2744" target="_blank">
+	<a href="http://www.bangormaine.gov/?id=2&amp;sub_id=2744" target="_blank">
+		<h2 id="oldtown" class="current">
 			Oldtown
-		</a>
-	</h2>
+		</h2>
+	</a>
 	<p class="comment">
 		<strong>&uarr;</strong>
 		Follows
@@ -69,7 +74,7 @@
 		The "<em>Outbound</em>" and "<em>Inbound</em>"
 		timetables stack for screen widths under 768px.
 	</p>
-	<div id="outbound">
+	<div id="outbound"><div>
 		<h3 class="oldtown">
 			Outbound
 		</h3>
@@ -446,9 +451,9 @@
 			</tr>
 		</table>
 		<a onclick="Echo.map.selectStop('H')">
-			<h4 id="orono-research-park-outbound" title="19 Godfrey Dr, Orono">
+			<h4 id="research-park-outbound" title="19 Godfrey Dr, Orono">
 				<strong class="oldtown">H</strong>
-				<em>Orono Research Park</em>
+				<em>Research Park</em>
 				<time class="relative" title="2014-11-04T15:58-0500" datetime="2014-11-04T15:58-0500">3h 58m</time>
 			</h4>
 		</a>
@@ -514,7 +519,7 @@
 				<td><s>23</s></td>
 			</tr>
 		</table>
-	</div>
+	</div></div>
 	<div id="inbound">
 		<h3 class="oldtown">
 			Inbound
